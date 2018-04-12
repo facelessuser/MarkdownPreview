@@ -2,3 +2,5 @@
 .DS_Store
 tests/*.html
 site/*
+build/*
+.cache/*

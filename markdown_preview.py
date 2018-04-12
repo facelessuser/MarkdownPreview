@@ -588,17 +588,17 @@ class GithubCompiler(Compiler):
         re_header = re.compile(r'(?P<open><h([1-6])>)(?P<text>.*?)(?P<close></h\2>)', re.DOTALL)
 
         def inject_id(m):
-            id = uslugify(m.group('text'), '-')
-            if id == '':
+            header_id = uslugify(m.group('text'), '-')
+            if header_id == '':
                 return m.group(0)
             # Append a dash and number for uniqueness if needed
-            value = unique.get(id, None)
+            value = unique.get(header_id, None)
             if value is None:
-                unique[id] = 1
+                unique[header_id] = 1
             else:
-                unique[id] += 1
-                id += "-%d" % value
-            return m.group('open')[:-1] + (' id="%s">' % id) + m.group('text') + m.group('close')
+                unique[header_id] += 1
+                header_id += "-%d" % value
+            return m.group('open')[:-1] + (' id="%s">' % header_id) + m.group('text') + m.group('close')
 
         return re_header.sub(inject_id, html)
 

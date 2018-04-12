@@ -268,7 +268,7 @@ If you add the codehilite extension manually in the enabled extensions, you can 
     ]
     ```
 
-* Change the higlight theme:
+* Change the highlight theme:
 
     ```js
     "markdown_extensions": [
@@ -321,7 +321,7 @@ The `codehiite` extension's `pygments_style` option is only useful if you are us
     "pygments_css_class": "codehilite",
 ```
 
-See [codehilte page](https://python-markdown.github.io/extensions/code_hilite) for more info.
+See [codehilite page](https://python-markdown.github.io/extensions/code_hilite) for more info.
 
 ## Meta Data Support
 
@@ -344,7 +344,7 @@ YAML frontmatter has a few special key names that are used that will not be hand
 
  - **basepath**: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to reference images in a different location.)
  - **references**: Can take a file path or an array of file paths for separate markdown files containing references, footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.
- - **destination**: This is an absolute file path or relative file path for when the markdown is saved to html via the build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.
+ - **destination**: This is an absolute file path or relative file path for when the markdown is saved to HTML via the build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.
  - **settings**: This is a dictionary where you can override settings that are in the settings file.
 
 ```yaml
@@ -388,13 +388,13 @@ YAML frontmatter has a few special key names that are used that will not be hand
 ---
 ```
 
-## Parsing Github Flavored Markdown
+## Parsing GitHub Flavored Markdown
 
-Github Flavored Mardown (GFM) is a very popular markdown.  Markdown Preview can actually handle them in a couple of ways: online and offline.
+GitHub Flavored Markdown (GFM) is a very popular markdown.  Markdown Preview can actually handle them in a couple of ways: online and offline.
 
 ### Online
 
-Parsing GFM using the online method requires using the Github API as the parser.  It may also require setting `github_mode` to `gfm` to get things like tasklists to render properly.
+Parsing GFM using the online method requires using the GitHub API as the parser.  It may also require setting `github_mode` to `gfm` to get things like tasklists to render properly.
 
 ```js
     /*

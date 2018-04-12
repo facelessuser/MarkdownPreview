@@ -16,12 +16,12 @@
                         "children":
                         [
                             {
-                                "command": "open_file", 
-                                "args": {"file": "${packages}/Markdown Preview/MarkdownPreview.sublime-settings"},
+                                "command": "open_file",
+                                "args": {"file": "${packages}/MarkdownPreview/MarkdownPreview.sublime-settings"},
                                 "caption": "Settings – Default"
                             },
                             {
-                                "command": "open_file", 
+                                "command": "open_file",
                                 "args": {"file": "${packages}/User/MarkdownPreview.sublime-settings"},
                                 "caption": "Settings – User"
                             },

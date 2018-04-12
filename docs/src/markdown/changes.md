@@ -36,7 +36,7 @@ Please read documentation as there have been big changes in this version which m
 
 * Fix outdated links.
 
-* Remove MatjJax and UML option in favor of a more generalized solution via the pre-existing `css` option.
+* Remove MathJax and UML option in favor of a more generalized solution via the pre-existing `css` option.
 
 * Remove `embed_css_for_sublime_output` option in favor of more generalized `include_head` option.
 
@@ -47,15 +47,15 @@ Please read documentation as there have been big changes in this version which m
 ## 1.4.0
 
 * `css` setting can now be an array and contain multiple CSS files (see settings file for more info).
-* Updated Github style to latest.
+* Updated GitHub style to latest.
 
 ## 1.3.0
 
 * Now supports any markdown parser through a generalized method.  Now you can map a binary to parser name via `markdown_binary_map`.  Then use the parser name in `enabled_parsers` to use it.
-* Multimarkdown specific settings have been removed.  Multimarkdown should now be configured via `markdown_binary_map` and `enabled_parsers`.
+* MultiMarkdown specific settings have been removed.  MultiMarkdown should now be configured via `markdown_binary_map` and `enabled_parsers`.
 * Upgraded to Python Markdown 2.6.4.
 * Removed internal PyYaml and Pygments.  Markdown Preview now uses Package Control dependencies to obtain PyYaml and Pygments.
-* Update kbd CSS for Github.
+* Update kbd CSS for GitHub.
 
 ## 1.0.3
 
@@ -69,9 +69,9 @@ Please read documentation as there have been big changes in this version which m
 
 * Removed markdown2 parser for its not well maintained and buggy.
 * Make Python Markdown parser as default.
-* Split the preview commands for *Python Markdown* parser and *Github Flavored Markdown* parser.
+* Split the preview commands for *Python Markdown* parser and *GitHub Flavored Markdown* parser.
 * Add markdown file build support, build parser are config via the origin `"parser"` settings.
-* Add this changlog file for both developpers and users.
+* Add this changelog file for both developers and users.
 * Add messages.json which make display of `README.md` and `CHANGES.md`
 * Try use `Markdown Extended.tmLanguage` for cheat sheet if you installed `Markdown Extended`.
 

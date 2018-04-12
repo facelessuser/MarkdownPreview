@@ -54,7 +54,7 @@ class Settings(object):
             else:
                 return self._sub_settings.get(key, default)
 
-    def set(self, key, value):
+    def set(self, key, value):  # noqa A001
         """
         Set method for the settings object.
 
