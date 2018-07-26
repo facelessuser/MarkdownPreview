@@ -792,7 +792,7 @@ class MarkdownCompiler(Compiler):
             # Ensure extension is in correct format and separate config from extension
             if isinstance(e, str):
                 ext = e
-                config = OrderedDict()
+                config = OrderedDict(extensions[e])
             elif isinstance(e, (dict, OrderedDict)):
                 ext = list(e.keys())[0]
                 config = list(e.values())[0]
