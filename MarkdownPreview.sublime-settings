@@ -21,6 +21,7 @@
         default - The current default parser is python-markdown parser.
         markdown - Use the built-in python-markdown parser
         github - Use the github API to convert markdown, so you can use GitHub flavored Markdown, see https://help.github.com/articles/github-flavored-markdown/
+        gitlab - Use the gitlab API to convert markdown, so you can use GitLab flavored Markdown, see https://docs.gitlab.com/ee/user/markdown.html
     */
     "parser": "markdown",
 
@@ -133,13 +134,13 @@
 
     /*
         Enabled parsers for the parser "select parser" command
-        Available parsers: markdown, github
+        Available parsers: markdown, github, gitlab
 
         When there are more than one parser in the list, Sublime will prompt
         via the quick panel for which one to use.  If there is only one, it
         will automatically run that parser.
     */
-    "enabled_parsers": ["markdown", "github"],
+    "enabled_parsers": ["markdown", "github", "gitlab"],
 
     /*
         Custom external markdown parsers.
@@ -165,6 +166,12 @@
     "github_mode": "markdown",
 
     /*
+        Default mode for the gitlab Markdown parser : markdown (documents) or gfm (comments)
+        see https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
+    */
+    "gitlab_mode": "gfm",
+
+    /*
         Enables a post process to inject header ids to ensure hrefs to headers work
     */
     "github_inject_header_ids": false,
@@ -176,9 +183,15 @@
     // "github_oauth_token": "secret",
 
     /*
+        Uses a personal token when parsing markdown with GitLab API. To create one for Markdown Preview, see https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html.
+        Warn: this secret *must not be shared* with anyone and at least you should create it with minimal scopes for security reasons.
+    */
+    // "gitlab_personal_token": "secret",
+
+    /*
         Sets the default css file to embed in the HTML
 
-        default - Use the builtin CSS or github CSS, depending on parser config (markdown.css or github.css)
+        default - Use the builtin CSS or github/gitlab CSS, depending on parser config (markdown.css, github.css or gitlab.css)
         other - Set an absolute path or url to any css file
 
         Should be an array, but will take a single string to support legacy convention.
@@ -213,8 +226,20 @@
         Set an array of URLs or filepaths to JavaScript files. Absolute filepaths will be loaded
         into the script tag; others will be set as the `src` attribute. The order of files in the
         array is the order in which they are embedded.
+
+        default - Use the builtin javascripts or github/gitlab javascripts, depending on parser config
+        other - Set an absolute path or url to any javascripts file
+
+        Should be an array, but will take a single string to stay consistent with "css".
     */
-    "js": [],
+    "js": ["default"],
+
+    /*
+        Sets syntax highlighting theme for blocks of code.
+
+        Currently, one of "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai".
+    */
+    "gitlab_highlight_theme": "white",
 
     /*
         Enable auto-reloaded on save. Will not work if GitHub parser is used without oauth key specified.

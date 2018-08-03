@@ -3,6 +3,8 @@
 [custom-fences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences
 [flow]: https://flowchart.js.org/
 [gfm-api]: https://developer.github.com/v3/markdown/
+[gitlab_highlight_theme]: https://gitlab.com/help/user/profile/preferences#syntax-highlighting-theme
+[glfm-api]: https://docs.gitlab.com/ee/api/markdown.html
 [gfm-help]: https://help.github.com/articles/github-flavored-markdown/
 [home]: https://github.com/facelessuser/MarkdownPreview
 [issue]: https://github.com/facelessuser/MarkdownPreview/issues

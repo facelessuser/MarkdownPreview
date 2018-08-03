@@ -9,6 +9,7 @@ EMOJI
 Frontmatter
 GFM
 GitHub
+GitLab
 HTTPS
 JSON
 Julien
@@ -49,6 +50,7 @@ js
 json
 kbd
 lowercases
+monokai
 oauth
 parsers
 permalink
@@ -59,6 +61,7 @@ readme
 readmes
 revolunet
 slugify
+solarized
 stylesheets
 sublicense
 superfences
