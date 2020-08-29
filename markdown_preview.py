@@ -476,11 +476,11 @@ class Compiler(object):
         return text
 
     def preprocessor_kroki(self, source):
-        """Replace supported tagged code fences with a markdown permalink"""
-        valid_schemes = ['plantuml','erd','blockdiag','seqdiag','nomnoml','mermaid']
+        """Replace supported tagged code fences with a markdown permalink."""
+        valid_schemes = ['plantuml', 'erd', 'blockdiag', 'seqdiag', 'nomnoml', 'mermaid']
         text = source
 
-        fences = list(re.finditer('^```(\w+)$(.*?^)```', source, re.DOTALL | re.MULTILINE))
+        fences = list(re.finditer(R'^```(\w+)$(.*?^)```', source, re.DOTALL | re.MULTILINE))
         for fence in reversed(fences):
             scheme = fence.group(1)
             if scheme in valid_schemes:
