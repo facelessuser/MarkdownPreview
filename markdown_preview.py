@@ -14,6 +14,8 @@ import codecs
 import cgi
 import yaml
 import textwrap
+import base64
+import zlib
 from collections import OrderedDict
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
@@ -366,6 +368,8 @@ class Compiler(object):
                 contents, self.settings.get("strip_critic_marks", "accept") == "accept"
             )
 
+        contents = self.preprocessor_kroki(contents)
+
         contents = self.parser_specific_preprocess(contents)
 
         return contents
@@ -468,6 +472,23 @@ class Compiler(object):
         critic = CriticViewPreprocessor(critic_stash)
         critic.config = {'mode': mode}
         text = '\n'.join(critic.run(source.split('\n')))
+
+        return text
+
+    def preprocessor_kroki(self, source):
+        """Replace supported tagged code fences with a markdown permalink"""
+        valid_schemes = ['plantuml','erd','blockdiag','seqdiag','nomnoml','mermaid']
+        text = source
+
+        fences = list(re.finditer('^```(\w+)$(.*?^)```', source, re.DOTALL | re.MULTILINE))
+        for fence in reversed(fences):
+            scheme = fence.group(1)
+            if scheme in valid_schemes:
+                diagram_source = fence.group(2)
+                encoded = base64.urlsafe_b64encode(zlib.compress(diagram_source.encode(), 9))
+                # TODO: make the output type (e.g. PNG) a configuration option
+                link = '![Diagram](https://kroki.io/%s/svg/%s)' % (scheme, encoded.decode())
+                text = text[slice(fence.start())] + link + text[slice(fence.end(), None)]
 
         return text
 
