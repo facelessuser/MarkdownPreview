@@ -173,17 +173,17 @@ class MarkdownPreviewListener(sublime_plugin.EventListener):
     def on_post_save(self, view):
         """Handle auto-reload on save."""
         settings = sublime.load_settings('MarkdownPreview.sublime-settings')
-        parser = view.settings().get('parser')
-        external_parser_classes = [GithubCompiler, GitlabCompiler]
-        external_parser_used = parser in external_parser_classes
-        if external_parser_used:
-            auth_provided = settings.get(external_parser_classes[
-                [parser_class.compiler_name for parser_class in external_parser_classes].index(parser)
-            ].authentication_settings_key) is not None
-        if settings.get('enable_autoreload', True) and (not external_parser_used or auth_provided):
-            filetypes = settings.get('markdown_filetypes')
-            file_name = view.file_name()
-            if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
+        filetypes = settings.get('markdown_filetypes')
+        file_name = view.file_name()
+        if filetypes and file_name is not None and file_name.endswith(tuple(filetypes)):
+            parser = view.settings().get('parser')
+            external_parser_classes = [GithubCompiler, GitlabCompiler]
+            external_parser_used = parser in external_parser_classes
+            if external_parser_used:
+                auth_provided = settings.get(external_parser_classes[
+                    [parser_class.compiler_name for parser_class in external_parser_classes].index(parser)
+                ].authentication_settings_key) is not None
+            if settings.get('enable_autoreload', True) and (not external_parser_used or auth_provided):
                 temp_file = get_temp_preview_path(view)
                 if os.path.isfile(temp_file):
                     # re-execute markdown conversion
