@@ -794,7 +794,7 @@ class GitlabCompiler(OnlineCompiler):
     ]
     compiler_name = "gitlab"
     content_type = "application/json"
-    url = "https://gitlab.com/api/v4/markdown"
+    url = self.settings.get("gitlab_url", "https://gitlab.com/api/v4/markdown")
     authentication_settings_key = "gitlab_personal_token"
     authentication_api_key = "Private-Token"
     authentication_api_type = ""
