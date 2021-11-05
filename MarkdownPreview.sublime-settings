@@ -362,9 +362,13 @@
     */
     "strip_yaml_front_matter": false,
 
-    /* do we show the panel when building with CMD+B */
+    /*
+        Sets visibility of the build output panel when building with CMD+B.
+    */
     "show_panel_on_build": true,
 
-    /* do we include the CSS when outputting HTML? */
+    /*
+        Sets if CSS is included when outputting HTML.
+    */
     "include_head": ["build", "browser", "sublime", "clipboard", "save"]
 }
