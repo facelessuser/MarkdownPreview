@@ -188,14 +188,23 @@
     "github_inject_header_ids": false,
 
     /*
-        Uses an OAuth token when parsing markdown with GitHub API. To create one for Markdown Preview, see https://help.github.com/articles/creating-an-oauth-token-for-command-line-use.
-        Warn: this secret *must not be shared* with anyone and at least you should create it with minimal scopes for security reasons.
+        Use a personal access token to parse GitHub Flavored Markdown with
+        the GitHub API. For info on token creation, see this page:
+        https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+        Warning: the secret must not be shared with anyone; for security
+        reasons, it is recommended you use minimal scopes (i.e. do not
+        check any boxes for additional scopes).
     */
     // "github_oauth_token": "secret",
 
     /*
-        Uses a personal token when parsing markdown with GitLab API. To create one for Markdown Preview, see https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html.
-        Warn: this secret *must not be shared* with anyone and at least you should create it with minimal scopes for security reasons.
+        Use a personal access token to parse GitLab Flavored Markdown with
+        the GitLab API. For info on token creation, see this page:
+        https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
+
+        Warning: the secret must not be shared with anyone; for security
+        reasons, it is recommended you use minimal scopes.
     */
     // "gitlab_personal_token": "secret",
 
