@@ -3,7 +3,7 @@
 */
 {
     /*
-        Sets the default opener for HTML files
+        Sets the default opener for HTML files.
 
         default - Use the system default HTML viewer
         other - Set a full path to any executable. ex: /Applications/Google Chrome Canary.app or /Applications/Firefox.app
@@ -26,52 +26,61 @@
     "parser": "markdown",
 
     /*
-        By default, Markdown Preview builds the HTML in the source directory.
-        It expects the file to exist on disk.  It pops up the build output panel etc.
+        Overrides how HTML files are built.
 
-        If you wish to override this behavior, you can change "build_action"
+        By default, Markdown Preview builds the HTML in the source directory.
+        It expects the file to exist on disk, pops up the build output
+        panel etc.
+
+        To override this behavior, you can choose between the following:
 
         build - The default build behavior.
         browser - Preview the file in your browser.
         clipboard - Copy the HTML output to the clipboard.
         sublime - Export the HTML to a Sublime tab.
         save - Run the normal save command that outputs to the source directory.
-            It will also prompt for "save as" if the file does not exit on disk.
+               This will also prompt for "save as" if the file does not exit on disk.
 
-        All the build options use the default parser defined above in "parser"
+        All the build options use the default parser defined above in "parser".
     */
     "build_action": "build",
 
     /*
-        If Pygments is being used, you may want to inject one of the Pygment styles provided into the HTML.
-        If so, enable this.
+        Inject Pygment styles into the HTML.
+
+        You may want to enable this if Pygments is being used.
     */
     "pygments_inject_css": true,
 
     /*
-        Name of the Pygments style to inject. Available styles are the styles provided by pygments
-        plus "github" and "github2014".
+        Name of the Pygments style to inject.
+
+        Available styles are those provided by Pygments plus "github" and "github2014".
     */
     "pygments_style": "github",
 
     /*
-        This is the class to prepend to the pygments CSS styles. Make sure it matches whatever class(es)
-        you've specified in the extension that controls Pygments highlighting.  CodeHilite's default is
-        "codehilite". Pymdownx's default is "highlight". Depending on which highlighter you are using,
-        you should update accordingly.
+        Class to prepend to Pygments CSS styles.
+
+        Make sure this setting matches whatever class(es) you've specified
+        in the extension that controls Pygments highlighting. CodeHilite's
+        default is "codehilite". Pymdownx's default is "highlight".
+
+        Update this setting to match the highlighter you are using.
     */
     "pygments_css_class": "highlight",
 
     /*
         Markdown extension configuration.
 
-        To specify a function in this JSON configuration, create an object with the key "!!python/name"
-        and set it to the import path to the function "module.submodule.etc.function".
+        To specify a function in this JSON configuration, create an object
+        with the key "!!python/name" and set it to the import path to
+        the function "module.submodule.etc.function".
     */
     "markdown_extensions": [
         // Python Markdown Extra with SuperFences.
         // You can't include "extra" and "superfences"
-        // as "fenced_code" can not be included with "superfences",
+        // as "fenced_code" cannot be included with "superfences",
         // so we include the pieces separately.
         "markdown.extensions.footnotes",
         "markdown.extensions.attr_list",
@@ -81,7 +90,7 @@
         "markdown.extensions.md_in_html",
         "pymdownx.betterem",
         // Extra's Markdown parsing in raw HTML cannot be
-        // included by itself, but "pymdownx" exposes it so we can.
+        // included by itself, but "pymdownx" exposes it, so we can.
 
         // More default Python Markdown extensions
         {
@@ -126,7 +135,7 @@
             }
         },
         {
-            "pymdownx.emoji": {  // Provide GitHub's emojis
+            "pymdownx.emoji": {  // Provide GitHub's emoji
                 "emoji_index": {"!!python/name": "pymdownx.emoji.gemoji"},
                 "emoji_generator": {"!!python/name": "pymdownx.emoji.to_png"},
                 "alt": "short",
@@ -144,23 +153,23 @@
     ],
 
     /*
-        Enabled parsers for the parser "select parser" command
+        Enabled parser(s) for the parser "select parser" command.
         Available parsers: markdown, github, gitlab
 
-        When there are more than one parser in the list, Sublime will prompt
-        via the quick panel for which one to use.  If there is only one, it
-        will automatically run that parser.
+        When the list contains more than one parser, Sublime will prompt
+        you to pick one of them via the quick panel. Otherwise, the sole
+        parser provided is run automatically.
     */
     "enabled_parsers": ["markdown", "github", "gitlab"],
 
     /*
         Custom external Markdown parsers.
 
-        "markdown_binary_map" contains key values pairs.  The key
-        is name of the parser and what is used in "enabled_parsers"
-        to turn on the access to the parser.  The value is an array
-        containing the path to the binary and all the parameters that
-        are desired.
+        "markdown_binary_map" contains key-value pairs.
+        The key is the name of the parser and what is used in
+        "enabled_parsers" to turn on the access to the parser.
+        The value is an array containing the path to the binary
+        and all the parameters that are desired.
 
         MultiMarkDown is provided as an example below. Its path may differ
         on your system.
@@ -185,7 +194,7 @@
     "gitlab_mode": "gfm",
 
     /*
-        Enables a post process to inject header ids to ensure hrefs to headers work
+        Enables a post process to inject header IDs to ensure hrefs to headers work.
     */
     "github_inject_header_ids": false,
 
@@ -225,9 +234,9 @@
     },
 
     /*
-        Allow CSS overrides
+        Allow CSS overrides.
 
-        true - Any file with matching a .markdown_filetype extension with .css will be loaded as an override
+        true - Any file with matching a .markdown_filetype extension with .css will be loaded as an override.
         false - Matching files ignored
     */
     "allow_css_overrides": true,
@@ -246,11 +255,12 @@
 
 
     /*
-        Sets the JavaScript files to embed in the HTML
+        Provide any JavaScript files to be embedded in the HTML.
 
-        Set an array of URLs or filepaths to JavaScript files. Absolute filepaths will be loaded
-        into the script tag; others will be set as the `src` attribute. The order of files in the
-        array is the order in which they are embedded.
+        Setting consists of an array of URLs or filepaths to JavaScript files.
+        Absolute filepaths will be loaded into the script tag, URLs will be
+        set via the `src` attribute.
+        All files are embedded in the order in which they appear in the array.
 
         default - Use the built-in JavaScript or GitHub/GitLab JavaScript, depending on parser config.
         other - Set an absolute path or URL to any JavaScript file.
@@ -266,7 +276,7 @@
     /*
         Sets syntax highlighting theme for blocks of code.
 
-        Currently, one of "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai".
+        One of "white" (default), "dark", "solarized-dark", "solarized-light", and "monokai".
     */
     "gitlab_highlight_theme": "white",
 
@@ -279,19 +289,22 @@
     "enable_autoreload": true,
 
     /*
-        Sets the supported filetypes for auto-reload on save
+        Sets the supported filetypes for auto-reload on save.
     */
     "markdown_filetypes": [".md", ".markdown", ".mdown"],
 
     /*
-        Sets a custom temporary folder for MarkdownPreview-generated HTML files. Useful if you're
-        using LiveReload and don't want to use the OS default. The directory will be created if it
-        doesn't exist. Relative paths are supported, and are checked against `os.path.isabs`, see
-        doc: http://docs.python.org/3/library/os.path.html#os.path.isabs
+        Sets a custom temporary folder for MarkdownPreview-generated HTML
+        files.
+
+        This is useful if you're using LiveReload and don't want to use
+        the OS default. The directory will be created if it doesn't exist yet.
+        Relative paths are supported and are checked against `os.path.isabs`,
+        see docs: http://docs.python.org/3/library/os.path.html#os.path.isabs
 
         Examples: /tmp/custom_folder   (Linux/macOS - absolute path)
                     C:/TEMP/MYNOTES
-                    C:\\TEMP\\MYNOTES    (Windows - absolute path, forward slash or escaped back slash)
+                    C:\\TEMP\\MYNOTES    (Windows - absolute path, forward slash or escaped backslash)
                     build                (All OS - relative path, current dir)
                     ../build             (Linux/macOS - relative path, in parent dir)
                     ..\\build            (Windows - relative path, in parent dir)
@@ -300,6 +313,7 @@
 
     /*
         Sets HTML output to a simple form:
+
             - No head
             - No body tags
             - ids, classes, and style are stripped out
@@ -310,6 +324,7 @@
 
     /*
         Sets how image paths are handled.
+
         Setting is a string value: (absolute | relative | base64 | none)
             absolute: converts relative local paths to absolute
             relative: converts relative local paths to a path relative to the
@@ -321,6 +336,7 @@
 
     /*
         Sets how file paths are handled.
+
         Setting is a string value: (absolute | relative | none)
             absolute: converts relative local paths to absolute
             relative: converts relative local paths to a path relative to the
@@ -337,12 +353,12 @@
             reject: Rejects the proposed inserts and deletions (comments etc. are discarded)
             none: does nothing
 
-        Critic marks only affects "github" and "markdown" (Python Markdown).
+        Critic marks only affect the "github" and "markdown" parser.
     */
     "strip_critic_marks": "none",
 
     /*
-        Strips the YAML front matter header and converts title to a heading
+        Strips the YAML front matter header and converts title to a heading.
     */
     "strip_yaml_front_matter": false,
 
