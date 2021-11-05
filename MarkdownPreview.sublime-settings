@@ -11,17 +11,17 @@
     "browser": "default",
 
     /*
-        Sets the parser used for building markdown to HTML.
+        Sets the parser used for building Markdown to HTML.
 
-        NOTE: The parser setting is not for the preview commands.
-        The previews have separate commands for each parser markdown.
+        NOTE: The parser setting is not meant for the preview commands.
+        The previews have separate commands for each Markdown parser.
 
-        Warning for github API: if you have a ST2 linux build, Python is not built with SSL so it may not work
+        Warning regarding the GitHub API: if you have a ST2 Linux build, Python is not built with SSL so it may not work.
 
         default - The current default parser is python-markdown parser.
-        markdown - Use the built-in python-markdown parser
-        github - Use the github API to convert markdown, so you can use GitHub flavored Markdown, see https://help.github.com/articles/github-flavored-markdown/
-        gitlab - Use the gitlab API to convert markdown, so you can use GitLab flavored Markdown, see https://docs.gitlab.com/ee/user/markdown.html
+        markdown - Use the built-in python-markdown parser.
+        github - Use the GitHub API to convert Markdown, so you can use GitHub Flavored Markdown, see https://help.github.com/articles/github-flavored-markdown/
+        gitlab - Use the GitLab API to convert Markdown, so you can use GitLab Flavored Markdown, see https://docs.gitlab.com/ee/user/markdown.html
     */
     "parser": "markdown",
 
@@ -154,7 +154,7 @@
     "enabled_parsers": ["markdown", "github", "gitlab"],
 
     /*
-        Custom external markdown parsers.
+        Custom external Markdown parsers.
 
         "markdown_binary_map" contains key values pairs.  The key
         is name of the parser and what is used in "enabled_parsers"
@@ -162,7 +162,7 @@
         containing the path to the binary and all the parameters that
         are desired.
 
-        Multimarkdown is provided as an example below.  It's path may differ
+        MultiMarkDown is provided as an example below. Its path may differ
         on your system.
     */
 
@@ -171,13 +171,15 @@
     },
 
     /*
-        Default mode for the github Markdown parser : markdown (documents) or gfm (comments)
+        Default mode for GitHub's Markdown parser:
+        markdown (documents) or gfm (comments)
         see http://developer.github.com/v3/markdown/#render-an-arbitrary-markdown-document
     */
     "github_mode": "markdown",
 
     /*
-        Default mode for the gitlab Markdown parser : markdown (documents) or gfm (comments)
+        Default mode for the GitLab's Markdown parser:
+        markdown (documents) or gfm (comments)
         see https://docs.gitlab.com/ee/api/markdown.html#render-an-arbitrary-markdown-document
     */
     "gitlab_mode": "gfm",
@@ -209,10 +211,10 @@
     // "gitlab_personal_token": "secret",
 
     /*
-        Sets the default css file to embed in the HTML
+        Sets the default CSS file to embed in the HTML.
 
-        default - Use the builtin CSS or github/gitlab CSS, depending on parser config (markdown.css, github.css or gitlab.css)
-        other - Set an absolute path or url to any css file
+        default - Use the built-in CSS or GitHub/GitLab CSS, depending on parser config (markdown.css, github.css or gitlab.css).
+        other - Set an absolute path or URL to any CSS file.
 
         Should be an array, but will take a single string to support legacy convention.
     */
@@ -231,15 +233,14 @@
     "allow_css_overrides": true,
 
     /*
-        Specify a HTML template file to render your markdown within.
+        Specify an HTML template file with which to render your Markdown.
 
-        Available place holders in HTML template:
-        {{ HEAD }} - would be replaced by generated stylesheets, javascripts enabled above
-        {{ BODY }} - would be replaced by HTML converted from markdown
+        Available placeholders in the HTML template:
+        {{ HEAD }} - gets replaced with generated stylesheets and JavaScript enabled above
+        {{ BODY }} - gets replaced with HTML converted from Markdown
 
-        Remove "default" from "css" setting to avoid injecting the default CSS if desired.
-
-        Refer to 'customized-template-sample.html' as a show case.
+        Remove "default" from "css" setting to avoid injecting the default CSS
+         if desired. Refer to 'customized-template-sample.html' as a showcase.
     */
     "html_template": "",
 
@@ -251,8 +252,8 @@
         into the script tag; others will be set as the `src` attribute. The order of files in the
         array is the order in which they are embedded.
 
-        default - Use the builtin javascripts or github/gitlab javascripts, depending on parser config
-        other - Set an absolute path or url to any javascripts file
+        default - Use the built-in JavaScript or GitHub/GitLab JavaScript, depending on parser config.
+        other - Set an absolute path or URL to any JavaScript file.
 
         Should be an array, but will take a single string to stay consistent with "css".
     */
@@ -270,7 +271,10 @@
     "gitlab_highlight_theme": "white",
 
     /*
-        Enable auto-reloaded on save. Will not work if GitHub parser or GitLab parser is used without oauth key specified.
+        Enable auto-reload on save.
+
+        Will not work if the GitHub parser or GitLab parser are used
+        without a valid access token.
     */
     "enable_autoreload": true,
 
@@ -285,11 +289,11 @@
         doesn't exist. Relative paths are supported, and are checked against `os.path.isabs`, see
         doc: http://docs.python.org/3/library/os.path.html#os.path.isabs
 
-        Examples: /tmp/custom_folder   (Linux/OSX - absolute path)
+        Examples: /tmp/custom_folder   (Linux/macOS - absolute path)
                     C:/TEMP/MYNOTES
                     C:\\TEMP\\MYNOTES    (Windows - absolute path, forward slash or escaped back slash)
                     build                (All OS - relative path, current dir)
-                    ../build             (Linux/OSX - relative path, in parent dir)
+                    ../build             (Linux/macOS - relative path, in parent dir)
                     ..\\build            (Windows - relative path, in parent dir)
     */
     "path_tempfile": "",
@@ -326,7 +330,8 @@
     "file_path_conversions": "absolute",
 
     /*
-        Sets how multimarkdown critic marks are handled.
+        Sets how MultiMarkDown critic marks are handled.
+
         Setting is a string value: (accept | reject | none)
             accept: Accepts the proposed inserts and deletions (comments etc. are discarded)
             reject: Rejects the proposed inserts and deletions (comments etc. are discarded)
