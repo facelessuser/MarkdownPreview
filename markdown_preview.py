@@ -520,7 +520,7 @@ class Compiler(object):
         self.meta_title = None
         meta = []
         for k, v in self.settings.get("meta", {}).items():
-            if k == "title":
+            if k.lower() == "title":
                 if isinstance(v, list):
                     if len(v) == 0:
                         v = ""
