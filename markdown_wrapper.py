@@ -18,7 +18,6 @@ class StMarkdown(Markdown):
         Register extensions with this instance of Markdown.
 
         Keyword arguments:
-
         * `extensions`: A list of extensions, which can either
            be strings or objects.  See the docstring on Markdown.
         * `configs`: A dictionary mapping module names to config options.
