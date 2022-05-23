@@ -613,5 +613,3 @@ the the `html_simple` option:
     */
     "html_simple": false,
 ```
-
---8<-- "refs.txt"

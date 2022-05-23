@@ -159,5 +159,3 @@ your own and load it instead.
 
 Please see the `MarkdownPreview.sublime-settings` file to see how custom fences are configured in case you need to
 configure them manually. Check out our [example file][example] if using YAML frontmatter to define custom fences.
-
---8<-- "refs.txt"

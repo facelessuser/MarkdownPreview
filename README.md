@@ -6,11 +6,13 @@
 
 Preview and build your markdown files quickly in your web browser using [Sublime Text](https://www.sublimetext.com/) 3.
 
-You can use the builtin [Python Markdown][pymd] parser (offline) or use the [GitHub Markdown API][gfm-api] or [GitLab Markdown API][glfm-api] (online) for the conversion.
+You can use the builtin [Python Markdown][pymd] parser (offline) or use the [GitHub Markdown API][gfm-api] or
+[GitLab Markdown API][glfm-api] (online) for the conversion.
 
 ## Features
 
-- Markdown preview using the [python-markdown][pymd] with syntax highlighting via Pygments and optional 3rd party extensions ([pymdown-extensions][pymdownx-docs] included by default).
+- Markdown preview using the [python-markdown][pymd] with syntax highlighting via Pygments and optional 3rd party
+  extensions ([pymdown-extensions][pymdownx-docs] included by default).
 - Markdown previews via the GitHub API.
 - Markdown previews via the GitLab API thanks to [@hadisfr][hadisfr].
 - Ability use other external Markdown parsers.
@@ -19,7 +21,7 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 - Configurable CSS and JavaScript assets with overriding if needed.
 - YAML support thanks to [@tommi][tommi].
 - Clipboard selection and copy to clipboard thanks to [@hexatrope][hexatrope].
-- MathJax support : `\(\frac{\pi}{2}\)` thanks to [@bps10][bps10].
+- MathJax support : `\(\frac{\pi}{2}\)`.
 - HTML template customization thanks to [@hozaka][hozaka].
 - Embed images as base64.
 - Strip out MultiMarkdown CriticMarkup.
@@ -35,7 +37,8 @@ https://facelessuser.github.io/MarkdownPreview/
 
 ## Attribution
 
-Markdown Preview contains a stripped down version of font awesome that is included in the default non-GitHub CSS.  It contains only the icons we currently use.
+Markdown Preview contains a stripped down version of font awesome that is included in the default non-GitHub CSS. It
+contains only the icons we currently use.
 
 https://fontawesome.com/license
 

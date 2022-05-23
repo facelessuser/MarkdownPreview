@@ -3,6 +3,8 @@ site_url: https://facelessuser.github.io/MarkdownPreview
 repo_url: https://github.com/facelessuser/MarkdownPreview
 edit_uri: tree/master/docs/src/markdown
 site_description: Markdown preview and build plugin for Sublime Text
+copyright: |
+  Copyright &copy; 2018 - 2022 <a href="https://github.com/facelessuser"  target="_blank" rel="noopener">Isaac Muse</a>
 
 docs_dir: docs/src/markdown
 theme:
@@ -19,6 +21,7 @@ theme:
     code: Roboto Mono
   features:
     - navigation.tabs
+    - navigation.top
 
 nav:
   - Home:
@@ -77,7 +80,11 @@ markdown_extensions:
   - pymdownx.mark:
   - pymdownx.striphtml:
   - pymdownx.snippets:
-      base_path: docs/src/markdown/_snippets
+      base_path:
+      - docs/src/markdown/.snippets
+      - LICENSE.md
+      auto_append:
+      - refs.md
   - pymdownx.keys:
       separator: "\uff0b"
   - pymdownx.details:

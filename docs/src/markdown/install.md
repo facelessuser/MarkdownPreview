@@ -7,5 +7,3 @@ We recommend installing via [Package Control][package-control].
 1. [Install][pc-install] Package Control if you haven't yet.
 2. Use the shortcut ++cmd+shift+p++ then select `Package Control: Install Package`.
 3. Look for and select `MarkdownPreview`.
-
---8<-- "refs.txt"
