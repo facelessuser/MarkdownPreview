@@ -61,6 +61,7 @@ ctrl
 davegandy
 docstring
 emoji
+eslint
 facelessuser
 fontawesome
 frac

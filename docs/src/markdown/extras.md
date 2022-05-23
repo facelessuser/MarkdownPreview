@@ -137,7 +137,7 @@ and [flowchart.js][flow] respectively.
 ```
 
 Please see the `MarkdownPreview.sublime-settings` file to see how custom fences are configured in case you need to
-configure them manually. Check out our [example file][example] xsif using YAML frontmatter to define custom fences.
+configure them manually. Check out our [example file][example] if using YAML frontmatter to define custom fences.
 
 ## Mermaid UML Support
 
@@ -156,5 +156,8 @@ your own and load it instead.
         "res://MarkdownPreview/js/mermaid.js"
     ]
 ````
+
+Please see the `MarkdownPreview.sublime-settings` file to see how custom fences are configured in case you need to
+configure them manually. Check out our [example file][example] if using YAML frontmatter to define custom fences.
 
 --8<-- "refs.txt"
