@@ -21,9 +21,12 @@
           - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
           - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
           - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js
+          - https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js
           - res://MarkdownPreview/js/uml.js
           - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js
           - res://MarkdownPreview/js/math_config.js
+          - res://MarkdownPreview/js/mermaid_config.js
+          - res://MarkdownPreview/js/mermaid.js
         markdown_extensions:
           - markdown.extensions.footnotes
           - markdown.extensions.attr_list
@@ -68,6 +71,9 @@
                   format: !!python/name:pymdownx.superfences.fence_code_format
                 - name: sequence
                   class: uml-sequence-diagram
+                  format: !!python/name:pymdownx.superfences.fence_code_format
+                - name: mermaid
+                  class: mermaid
                   format: !!python/name:pymdownx.superfences.fence_code_format
 ---
 test: This tests the meta extension
@@ -883,6 +889,22 @@ A->B: Normal line
 B-->C: Dashed line
 C->>D: Open arrow
 D-->>A: Dashed open arrow
+```
+
+## Mermaid
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
 ```
 
 ## Math

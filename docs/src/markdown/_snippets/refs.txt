@@ -1,6 +1,7 @@
 [arithmatex]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
 [critic]: http://criticmarkup.com/
 [custom-fences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences
+[example]: https://raw.githubusercontent.com/facelessuser/MarkdownPreview/master/examples/test.md
 [flow]: https://flowchart.js.org/
 [gfm-api]: https://developer.github.com/v3/markdown/
 [gitlab_highlight_theme]: https://gitlab.com/help/user/profile/preferences#syntax-highlighting-theme

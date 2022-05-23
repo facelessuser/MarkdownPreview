@@ -9,7 +9,8 @@
 ## To preview
 
 - Optionally select some of your markdown for conversion.
-- Use the shortcut ++cmd+shift+p++ then select `MarkdownPreview` to show the follow commands (you will be prompted to select which parser you prefer):
+- Use the shortcut ++cmd+shift+p++ then select `MarkdownPreview` to show the follow commands (you will be prompted to
+  select which parser you prefer):
     - Markdown Preview: Preview in Browser
     - Markdown Preview: Export HTML in Sublime Text
     - Markdown Preview: Copy to Clipboard
@@ -45,7 +46,8 @@
 
 ## Custom Templates
 
-By default, Markdown Preview uses a simple template, but you can use your own custom template with the setting `html_template`. If you wish to not include the default stylesheets, just remove them from the `css` option.
+By default, Markdown Preview uses a simple template, but you can use your own custom template with the setting
+`html_template`. If you wish to not include the default stylesheets, just remove them from the `css` option.
 
 ```js
     /*
@@ -77,14 +79,18 @@ To get live updates while editing a file after preview, you need to do the follo
 2. Install [LiveReload][live-reload] package from Package Control.
 3. Restart.
 4. Open the command palette and select the command `LiveReload: Enable/disable plug-ins`.
-5. Select `Simple Reload with delay (400ms)`.  It is possible you can get away with `Simple Reload`, but some experience an issue where they are one rev behind when using `Simple Reload`.
+5. Select `Simple Reload with delay (400ms)`.  It is possible you can get away with `Simple Reload`, but some experience
+   an issue where they are one rev behind when using `Simple Reload`.
 6. Edit document and enjoy live reload.
 
-You don't need to enable `Simple Reload` on every file as it is done globally; it can be turned on or off as needed.  From now on, files should auto-reload when you open them in the browser unless you disable `Simple Reload`.
+You don't need to enable `Simple Reload` on every file as it is done globally; it can be turned on or off as needed.
+From now on, files should auto-reload when you open them in the browser unless you disable `Simple Reload`.
 
 ## Preview Path Conversion
 
-In the generated previews, paths are converted so that images and other links work properly. By default, paths are converted to absolute paths, but you can use relative if desired as well.  Image paths can also be changed to inject embedded base 64 images (only for local images). Path handling is controlled by the following two settings:
+In the generated previews, paths are converted so that images and other links work properly. By default, paths are
+converted to absolute paths, but you can use relative if desired as well.  Image paths can also be changed to inject
+embedded base 64 images (only for local images). Path handling is controlled by the following two settings:
 
 ```js
     /*
@@ -111,7 +117,8 @@ In the generated previews, paths are converted so that images and other links wo
 
 ## Preview Temp Location
 
-By default, previews are generated in the OSs default temp location, but you can specify your own custom temp location via the `path_tempfile` option:
+By default, previews are generated in the OSs default temp location, but you can specify your own custom temp location
+via the `path_tempfile` option:
 
 ```js
     /*
@@ -132,7 +139,8 @@ By default, previews are generated in the OSs default temp location, but you can
 
 ## Enabling Other External Markdown Parsers
 
-External parser commands and arguments should first be mapped to a name.  Each binary value must be an array with the path to the binary being first, followed by flags and options as individual indexes in the array.
+External parser commands and arguments should first be mapped to a name.  Each binary value must be an array with the
+path to the binary being first, followed by flags and options as individual indexes in the array.
 
 ```js
     "markdown_binary_map": {
@@ -148,9 +156,12 @@ Then the name can be placed in `enabled_parsers` to enable use of the new parser
 
 ## Configuring Python Markdown Extensions
 
-Python Markdown comes with a number of extensions and can also use a number of 3rd party extensions.  To configure Markdown Preview with extensions, use the `markdown_extensions` setting.
+Python Markdown comes with a number of extensions and can also use a number of 3rd party extensions.  To configure
+Markdown Preview with extensions, use the `markdown_extensions` setting.
 
-`markdown_extensions` is a setting that contains an array of extensions in the format of their import path. For instance, the Toc (Table of Contents) extension is found in the Markdown Package at `markdown.extensions.toc`.  This is according to Python Markdown [documentation][toc].  All extensions must be specified this way.
+`markdown_extensions` is a setting that contains an array of extensions in the format of their import path. For
+instance, the Toc (Table of Contents) extension is found in the Markdown Package at `markdown.extensions.toc`.  This is
+according to Python Markdown [documentation][toc].  All extensions must be specified this way.
 
 ```js
     "markdown_extensions": [
@@ -170,11 +181,15 @@ To configure an extension, make the entry a dictionary.  In this example, we wan
     ]
 ```
 
-You can configure extension options with strings, booleans, integers, floats, etc.  But sometimes, an extension can take a function.  Functions are not part of the JSON spec. Luckily, support has been added with the following syntax:
+You can configure extension options with strings, booleans, integers, floats, etc.  But sometimes, an extension can take
+a function.  Functions are not part of the JSON spec. Luckily, support has been added with the following syntax:
 
-To specify a function, create an object whose key is named `!!python/name`, and whose value is the import path of the function.  This syntax was picked to be similar to PyYaml's syntax which is used for the Markdown frontmatter.
+To specify a function, create an object whose key is named `!!python/name`, and whose value is the import path of the
+function.  This syntax was picked to be similar to PyYaml's syntax which is used for the Markdown frontmatter.
 
-So let's pretend we didn't like Toc's default slugify `markdown.extensions.headerid.slugify`, and instead wanted to use PyMdown Extensions' slugify `pymdownx.slugs.uslugify`.  We could specify the new slugify function with the following syntax:
+So let's pretend we didn't like Toc's default slugify `markdown.extensions.headerid.slugify`, and instead wanted to use
+PyMdown Extensions' slugify `pymdownx.slugs.uslugify`.  We could specify the new slugify function with the following
+syntax:
 
 ```js
     "markdown_extensions": [
@@ -238,7 +253,8 @@ And the parser that is used when building is set in the `parser` setting:
     "parser": "markdown",
 ```
 
-When building, a panel will be opened showing build information. This can be disabled by setting `show_panel_on_build` to `false`:
+When building, a panel will be opened showing build information. This can be disabled by setting `show_panel_on_build`
+to `false`:
 
 ```js
     /* do we show the panel when building with CMD+B */
@@ -247,7 +263,8 @@ When building, a panel will be opened showing build information. This can be dis
 
 ## Configuring Pygments
 
-If you add the `pymdownx.highlight` extension manually in the enabled extensions, you can override some of the default settings.
+If you add the `pymdownx.highlight` extension manually in the enabled extensions, you can override some of the default
+settings.
 
 * Turn language guessing *on* or *off* (*on* will highlight fenced blocks even if you don't specify a language):
 
@@ -330,11 +347,16 @@ See [highlight page](https://facelessuser.github.io/pymdown-extensions/extension
 
 ## Meta Data Support
 
-When the `meta` extension is enabled (https://python-markdown.github.io/extensions/meta_data), the results will be written to the HTML head in the form `<meta name="key" content="value1,value2">`.  `title` is the one exception, and its content will be written to the title tag in the HTML head.
+When the `meta` extension is enabled (https://python-markdown.github.io/extensions/meta_data), the results will be
+written to the HTML head in the form `<meta name="key" content="value1,value2">`.  `title` is the one exception, and
+its content will be written to the title tag in the HTML head.
 
 ## YAML Frontmatter Support
 
-YAML frontmatter can be stripped out and read when `strip_yaml_front_matter` is set to  `true` in the settings file.  In general the, the frontmatter is handled the same as [meta data](#meta-data-support), but if both exist in a file, the YAML keys will override the `meta` extension keys.  There are a few special key names that won't be handled as HTML meta data.
+YAML frontmatter can be stripped out and read when `strip_yaml_front_matter` is set to  `true` in the settings file. In
+general the, the frontmatter is handled the same as [meta data](#meta-data-support), but if both exist in a file, the
+YAML keys will override the `meta` extension keys.  There are a few special key names that won't be handled as HTML meta
+data.
 
 ```js
     /*
@@ -347,10 +369,15 @@ YAML frontmatter can be stripped out and read when `strip_yaml_front_matter` is 
 
 YAML frontmatter has a few special key names that are used that will not be handled as meta data:
 
- - **basepath**: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to reference images in a different location.)
- - **references**: Can take a file path or an array of file paths for separate markdown files containing references, footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.
- - **destination**: This is an absolute file path or relative file path for when the markdown is saved to HTML via the build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file cannot be found, it will use the `basepath` setting.
- - **settings**: This is a dictionary where you can override settings that are in the settings file.
+- **basepath**: An absolute path to configure the relative paths for images etc. (for when the markdown is supposed to
+  reference images in a different location.)
+- **references**: Can take a file path or an array of file paths for separate markdown files containing references,
+  footnotes, etc.  Can be an absolute path or relative path.  Relative paths first use the source file's directory, and
+  if the file cannot be found, it will use the `basepath` setting.
+- **destination**: This is an absolute file path or relative file path for when the markdown is saved to HTML via the
+  build command or the `Save to HTML` command.  Relative paths first use the source file's directory, and if the file
+  cannot be found, it will use the `basepath` setting.
+- **settings**: This is a dictionary where you can override settings that are in the settings file.
 
 ```yaml
 ---
@@ -394,11 +421,13 @@ YAML frontmatter has a few special key names that are used that will not be hand
 
 ## Parsing GitHub Flavored Markdown
 
-GitHub Flavored Markdown (GFM) is a very popular markdown.  Markdown Preview can actually handle them in a couple of ways: online and offline.
+GitHub Flavored Markdown (GFM) is a very popular markdown.  Markdown Preview can actually handle them in a couple of
+ways: online and offline.
 
 ### Online
 
-Parsing GFM using the online method requires using the GitHub API as the parser.  It may also require setting `github_mode` to `gfm` to get things like tasklists to render properly.
+Parsing GFM using the online method requires using the GitHub API as the parser.  It may also require setting
+`github_mode` to `gfm` to get things like tasklists to render properly.
 
 ```js
     /*
@@ -408,7 +437,9 @@ Parsing GFM using the online method requires using the GitHub API as the parser.
     "github_mode": "markdown",
 ```
 
-Using the GitHub API without an oauth key is limited to so many calls.  After the limit is reached, the GitHub API will deny further calls until after a set limit of time. To avoid this issue, you can set your API key in the settings as follows:
+Using the GitHub API without an oauth key is limited to so many calls.  After the limit is reached, the GitHub API will
+deny further calls until after a set limit of time. To avoid this issue, you can set your API key in the settings as
+follows:
 
 ```js
     /*
@@ -418,7 +449,10 @@ Using the GitHub API without an oauth key is limited to so many calls.  After th
     "github_oauth_token": "secret",
 ```
 
-The GitHub API only inserts IDs for headers when `github_mode` is `markdown`, but it doesn't quite generate the way that GitHub does in your project's readmes on the site. This makes it so the GitHub CSS doesn't create the clickable anchors. So when `github_mode` is `markdown`, you can have Markdown Preview insert the ids properly so the CSS works with the following option:
+The GitHub API only inserts IDs for headers when `github_mode` is `markdown`, but it doesn't quite generate the way that
+GitHub does in your project's readmes on the site. This makes it so the GitHub CSS doesn't create the clickable anchors.
+So when `github_mode` is `markdown`, you can have Markdown Preview insert the ids properly so the CSS works with the
+following option:
 
 ```js
     /*
@@ -466,7 +500,9 @@ You can set your personal token in the settings as follows:
 
 ## Including CSS
 
-Markdown Preview includes a default CSS via the `css` setting.  It uses the special keyword `default` to represent the default CSS. As seen below, CSS is configured per parser name (the same name used in `enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
+Markdown Preview includes a default CSS via the `css` setting.  It uses the special keyword `default` to represent the
+default CSS. As seen below, CSS is configured per parser name (the same name used in `enabled_parsers`). If a parser
+name cannot be found in the dictionary, `["default"]` will be used.
 
 ```js
     "css": {
@@ -476,11 +512,15 @@ Markdown Preview includes a default CSS via the `css` setting.  It uses the spec
     },
 ```
 
-You can include whatever CSS you want, and even remove the `default` if you like.  It can take URLs or file paths. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.css`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
+You can include whatever CSS you want, and even remove the `default` if you like.  It can take URLs or file paths. If
+you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you
+can use the special URL of `res://<package_name>/<subfolders>/file.css`. Using the `res://` format will allow Markdown
+    Preview to resolve the resource when it is in a package that is zipped and unzipped.
 
 ### Override CSS by File Type
 
-You can also override the default CSS with special file specific CSS. This CSS does not replace the default, but will append CSS for a supported file type after the conventional CSS.
+You can also override the default CSS with special file specific CSS. This CSS does not replace the default, but will
+append CSS for a supported file type after the conventional CSS.
 
 So assuming the following configuration:
 
@@ -498,11 +538,14 @@ We could enable the following:
     "allow_css_overrides": true,
 ```
 
-Then if we have a file `filename.md` and a CSS in the same directory `filename.css`, that CSS will be applied to that file.
+Then if we have a file `filename.md` and a CSS in the same directory `filename.css`, that CSS will be applied to that
+file.
 
 ### Including HTML HEAD
 
-By default, the head is always included in the HTML output. This includes the CSS, JavaScript, etc. If for some reason you need to omit the HEAD, you can by modifying the `include_head` option.  Just remove the target that you wish to omit the head in. The option `build` specifically refers to when `build_action` is set to `build` in the settings.
+By default, the head is always included in the HTML output. This includes the CSS, JavaScript, etc. If for some reason
+you need to omit the HEAD, you can by modifying the `include_head` option.  Just remove the target that you wish to omit
+the head in. The option `build` specifically refers to when `build_action` is set to `build` in the settings.
 
 ```js
     /* do we include the CSS when outputting HTML? */
@@ -513,11 +556,14 @@ By default, the head is always included in the HTML output. This includes the CS
 
 In case of using GitLab online compiler, you can set `gitlab_highlight_theme` to personalize syntax highlighting.
 
-Currently available options are "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai". Take a look at GitLab documentations [here][gitlab_highlight_theme] for more details.
+Currently available options are "white" (default), "dark", "solarized-dark", "solarized-light", and, "monokai". Take a
+look at GitLab documentations [here][gitlab_highlight_theme] for more details.
 
 ## Including JavaScript
 
-Markdown Preview include default JS (if required for the given parser) via the `js` setting.  It uses the special keyword `default` to represent the default JS. As seen below, JS is configured per parser name (the same name used in `enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
+Markdown Preview include default JS (if required for the given parser) via the `js` setting.  It uses the special
+keyword `default` to represent the default JS. As seen below, JS is configured per parser name (the same name used in
+`enabled_parsers`). If a parser name cannot be found in the dictionary, `["default"]` will be used.
 
 ```js
     "js": {
@@ -527,7 +573,11 @@ Markdown Preview include default JS (if required for the given parser) via the `
     },
 ```
 
-You can include whatever CSS you want, and even remove the `default` if you like. Each entry in the dictionary is a list and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and unzipped.
+You can include whatever CSS you want, and even remove the `default` if you like. Each entry in the dictionary is a list
+and can take file paths or URLs. If you want to add a resource that is contained within a Sublime Package (like the
+Markdown Preview package itself), you can use the special URL of `res://<package_name>/<subfolders>/file.js`. Using the
+    `res://` format will allow Markdown Preview to resolve the resource when it is in a package that is zipped and
+    unzipped.
 
 ## CriticMarkup
 
@@ -548,7 +598,9 @@ Python Markdown can strip/apply out [CriticMarkup][critic] syntax if desired.  S
 
 ### Simple HTML Output
 
-Some people may desire a stripped down output on occasions that does not include HTML headers, inline styles, and IDs. Markdown Preview has a mode that will strip out these things and omit using a template.  This mode can be enabled via the the `html_simple` option:
+Some people may desire a stripped down output on occasions that does not include HTML headers, inline styles, and IDs.
+Markdown Preview has a mode that will strip out these things and omit using a template.  This mode can be enabled via
+the the `html_simple` option:
 
 ```js
     /*

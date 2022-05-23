@@ -2,14 +2,19 @@
 
 Preview and build your markdown files quickly in your web browser.
 
-You can use the builtin [Python Markdown][pymd] parser (offline) or use the [GitHub Markdown API][gfm-api] (online) or [GitLab Markdown API][glfm-api] (online) for the conversion.
+You can use the builtin [Python Markdown][pymd] parser (offline) or use the [GitHub Markdown API][gfm-api] (online) or
+[GitLab Markdown API][glfm-api] (online) for the conversion.
 
 !!! note
-    If you choose the GitHub or GitLab API for conversion (set `parser` to `github` or `gitlab` in your settings), your code will be sent through HTTPS to GitHub or GitLab for live conversion. In case of GitHub, You'll have [GitHub Flavored Markdown][gfm-help], syntax highlighting and EMOJI support for free :heart: :gift:. If you make more than 60 calls a day, be sure to set your GitHub API key in the settings :smile:.
+    If you choose the GitHub or GitLab API for conversion (set `parser` to `github` or `gitlab` in your settings), your
+    code will be sent through HTTPS to GitHub or GitLab for live conversion. In case of GitHub, You'll have [GitHub
+    Flavored Markdown][gfm-help], syntax highlighting and EMOJI support for free :heart: :gift:. If you make more than
+    60 calls a day, be sure to set your GitHub API key in the settings :smile:.
 
 ## Features
 
-- Markdown preview using the [python-markdown][pymd] with syntax highlighting via Pygments and optional 3rd party extensions ([pymdown-extensions][pymdownx-docs] included by default).
+- Markdown preview using the [python-markdown][pymd] with syntax highlighting via Pygments and optional 3rd party
+  extensions ([pymdown-extensions][pymdownx-docs] included by default).
 - Markdown previews via the GitHub API.
 - Markdown previews via the GitLab API.
 - Ability use other external Markdown parsers.
@@ -30,7 +35,8 @@ You can use the builtin [Python Markdown][pymd] parser (offline) or use the [Git
 
 ## Attribution
 
-Markdown Preview contains a stripped down version of font awesome that is included in the default non-GitHub CSS.  It contains only the icons we currently use.
+Markdown Preview contains a stripped down version of font awesome that is included in the default non-GitHub CSS.  It
+contains only the icons we currently use.
 
 https://fontawesome.com/license
 

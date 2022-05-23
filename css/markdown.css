@@ -899,6 +899,10 @@ body .markdown-body
   vertical-align: middle;
 }
 
+.markdown-body diagram-div, .markdown-body div.uml-sequence-diagram, .markdown-body, div.uml-flowchart {
+  overflow: auto;
+}
+
 /* Media */
 @media only screen and (min-width: 480px) {
   .markdown-body {

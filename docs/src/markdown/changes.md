@@ -1,5 +1,9 @@
 # Changes
 
+## 2.4.0
+
+- **NEW**: Add `mermaid.js` support.
+
 ## 2.3.0
 
 Some **breaking** changes! Please read:
