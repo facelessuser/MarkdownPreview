@@ -30,8 +30,9 @@ nav:
     - Usage: usage.md
     - Extras: extras.md
   - About:
-    - Changes: changes.md
-    - License: license.md
+    - Contributing &amp; Support: about/contributing.md
+    - Changes: about/changes.md
+    - License: about/license.md
 
 markdown_extensions:
   - markdown.extensions.toc:
