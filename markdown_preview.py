@@ -880,7 +880,7 @@ class ExternalMarkdownCompiler(Compiler):
                 log(markdown_html)
                 markdown_html = _CANNOT_CONVERT
         else:
-            sublime.error_message("Cannot find %s binary!" % self.binary)
+            sublime.error_message("Cannot find %s binary!" % binary)
             markdown_html = _CANNOT_CONVERT
         return markdown_html
 
