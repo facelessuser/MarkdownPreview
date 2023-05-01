@@ -155,7 +155,7 @@ your own and load it instead.
         // Mermaid loader
         "res://MarkdownPreview/js/mermaid.js"
     ]
-````
+```
 
 Please see the `MarkdownPreview.sublime-settings` file to see how custom fences are configured in case you need to
 configure them manually. Check out our [example file][example] if using YAML frontmatter to define custom fences.
