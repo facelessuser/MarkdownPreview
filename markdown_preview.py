@@ -90,22 +90,28 @@ def request_url(url, data, headers):
 
 def get_temp_preview_path(view):
     """Return a permanent full path of the temp markdown preview file."""
-    settings = sublime.load_settings('MarkdownPreview.sublime-settings')
-
-    tmp_filename = '%s.html' % view.id()
-    if settings.get('path_tempfile'):
-        if os.path.isabs(settings.get('path_tempfile')):  # absolute path or not
-            tmp_dir = settings.get('path_tempfile')
-        else:
-            tmp_dir = os.path.join(os.path.dirname(view.file_name()), settings.get('path_tempfile'))
-    else:
-        tmp_dir = tempfile.gettempdir()
-
+    tmp_dir = get_temp_preview_dir(view)
     if not os.path.isdir(tmp_dir):  # create directory if not exists
         os.makedirs(tmp_dir)
 
+    tmp_filename = '%s.html' % view.id()
     tmp_fullpath = os.path.join(tmp_dir, tmp_filename)
     return tmp_fullpath
+
+
+def get_temp_preview_dir(view):
+    """Return a permanent full dir of the temp markdown preview file."""
+    settings = sublime.load_settings('MarkdownPreview.sublime-settings')
+    path_tempfile = settings.get('path_tempfile')
+    if path_tempfile:
+        if os.path.isabs(path_tempfile):  # absolute path or not
+            tmp_dir = path_tempfile
+        else:
+            tmp_dir = os.path.join(os.path.dirname(view.file_name()), path_tempfile)
+    else:
+        tmp_dir = tempfile.gettempdir()
+
+    return tmp_dir
 
 
 def save_utf8(filename, text):
