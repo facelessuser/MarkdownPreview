@@ -306,6 +306,9 @@
         the OS default. The directory will be created if it doesn't exist yet.
         Relative paths are supported and are checked against `os.path.isabs`,
         see docs: http://docs.python.org/3/library/os.path.html#os.path.isabs
+        Environment variables and user "~" placeholder are supported.
+        see docs: https://docs.python.org/3/library/os.path.html#os.path.expanduser
+        see docs: https://docs.python.org/3/library/os.path.html#os.path.expandvars
 
         Examples: /tmp/custom_folder   (Linux/macOS - absolute path)
                     C:/TEMP/MYNOTES

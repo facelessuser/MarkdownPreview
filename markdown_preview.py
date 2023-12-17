@@ -104,6 +104,7 @@ def get_temp_preview_dir(view):
     settings = sublime.load_settings('MarkdownPreview.sublime-settings')
     path_tempfile = settings.get('path_tempfile')
     if path_tempfile:
+        path_tempfile = filter_path(path_tempfile)
         if os.path.isabs(path_tempfile):  # absolute path or not
             tmp_dir = path_tempfile
         else:
@@ -112,6 +113,14 @@ def get_temp_preview_dir(view):
         tmp_dir = tempfile.gettempdir()
 
     return tmp_dir
+
+
+def filter_path(path):
+    """Return a path with user and variables expanded."""
+    path = os.path.expanduser(path)
+    path = os.path.expandvars(path)
+
+    return path
 
 
 def save_utf8(filename, text):

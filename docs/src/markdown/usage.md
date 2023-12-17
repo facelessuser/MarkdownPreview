@@ -129,6 +129,9 @@ via the `path_tempfile` option:
         using LiveReload and don't want to use the OS default. The directory will be created if it
         doesn't exist. Relative paths are supported, and are checked against `os.path.isabs`, see
         doc: http://docs.python.org/3/library/os.path.html#os.path.isabs
+        Environment variables and user "~" placeholder are supported.
+        see docs: https://docs.python.org/3/library/os.path.html#os.path.expanduser
+        see docs: https://docs.python.org/3/library/os.path.html#os.path.expandvars
 
         Examples: /tmp/custom_folder   (Linux/OSX - absolute path)
                     C:/TEMP/MYNOTES
