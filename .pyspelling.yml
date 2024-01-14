@@ -1,3 +1,5 @@
+jobs: 8
+
 matrix:
 - name: mkdocs
   pipeline:

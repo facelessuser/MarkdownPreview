@@ -100,7 +100,7 @@ def get_temp_preview_path(view):
 
 
 def get_temp_preview_dir(view):
-    """Return a permanent full dir of the temp markdown preview file."""
+    """Return a permanent full directory of the temp markdown preview file."""
     settings = sublime.load_settings('MarkdownPreview.sublime-settings')
     path_tempfile = settings.get('path_tempfile')
     if path_tempfile:
