@@ -4,7 +4,7 @@ repo_url: https://github.com/facelessuser/MarkdownPreview
 edit_uri: tree/master/docs/src/markdown
 site_description: Markdown preview and build plugin for Sublime Text
 copyright: |
-  Copyright &copy; 2018 - 2023 <a href="https://github.com/facelessuser"  target="_blank" rel="noopener">Isaac Muse</a>
+  Copyright &copy; 2018 - 2024 <a href="https://github.com/facelessuser"  target="_blank" rel="noopener">Isaac Muse</a>
 
 docs_dir: docs/src/markdown
 theme:
@@ -76,8 +76,8 @@ markdown_extensions:
   - pymdownx.caret:
   - pymdownx.smartsymbols:
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.escapeall:
       hardbreak: true
       nbsp: true
@@ -112,6 +112,35 @@ markdown_extensions:
       - example
       - quote
   - pymdownx.blocks.details:
+      types:
+      - name: details-new
+        class: new
+      - name: details-settings
+        class: settings
+      - name: details-note
+        class: note
+      - name: details-abstract
+        class: abstract
+      - name: details-info
+        class: info
+      - name: details-tip
+        class: tip
+      - name: details-success
+        class: success
+      - name: details-question
+        class: question
+      - name: details-warning
+        class: warning
+      - name: details-failure
+        class: failure
+      - name: details-danger
+        class: danger
+      - name: details-bug
+        class: bug
+      - name: details-example
+        class: example
+      - name: details-quote
+        class: quote
   - pymdownx.blocks.html:
   - pymdownx.blocks.definition:
   - pymdownx.blocks.tab:
