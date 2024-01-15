@@ -11,7 +11,7 @@ import re
 import json
 import time
 import codecs
-import cgi
+import html
 import yaml
 import textwrap
 from collections import OrderedDict
@@ -528,7 +528,7 @@ class Compiler(object):
         if not title:
             fn = self.view.file_name()
             title = 'untitled' if not fn else os.path.splitext(os.path.basename(fn))[0]
-        return '<title>%s</title>' % cgi.escape(title)
+        return '<title>%s</title>' % html.escape(title)
 
     def get_meta(self):
         """Get meta data."""
@@ -547,7 +547,7 @@ class Compiler(object):
                 v = ','.join(v)
             if v is not None:
                 meta.append(
-                    '<meta name="%s" content="%s">' % (cgi.escape(k, True), cgi.escape(v, True))
+                    '<meta name="%s" content="%s">' % (html.escape(k, True), html.escape(v, True))
                 )
         return '\n'.join(meta)
 
