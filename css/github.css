@@ -118,9 +118,8 @@
 }
 
 body {
-    width: 980px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 980px;
+    margin: 16px auto;
     background-color: var(--color-canvas-default);
 }
 
