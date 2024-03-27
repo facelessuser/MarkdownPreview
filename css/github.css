@@ -119,7 +119,7 @@
 
 body {
     max-width: 980px;
-    margin: 16px auto;
+    margin: 16px 25px;
     background-color: var(--color-canvas-default);
 }
 
