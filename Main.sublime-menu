@@ -1,7 +1,5 @@
 [
     {
-        "caption": "Preferences",
-        "mnemonic": "n",
         "id": "preferences",
         "children":
         [
@@ -16,11 +14,12 @@
                         "children":
                         [
                             {
-                                "command": "edit_settings", "args": {
+                                "caption": "Settings",
+                                "command": "edit_settings",
+                                "args": {
                                     "base_file": "${packages}/MarkdownPreview/MarkdownPreview.sublime-settings",
                                     "default": "{\n$0\n}\n"
-                                },
-                                "caption": "Settings"
+                                }
                             },
                             { "caption": "-" }
                         ]
