@@ -38,6 +38,6 @@
         "args": {
             "base_file": "${packages}/MarkdownPreview/MarkdownPreview.sublime-settings",
             "default": "{\n$0\n}\n"
-        },
+        }
     }
 ]
