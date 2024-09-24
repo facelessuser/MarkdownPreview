@@ -27,10 +27,17 @@
             "target": "clipboard"
         }
     },
-
     {
         "caption": "Markdown Preview: Open Markdown Cheat sheet",
         "command": "markdown_cheatsheet",
         "args": {}
+    },
+    {
+        "caption": "Preferences: MarkdownPreview Settings",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/MarkdownPreview/MarkdownPreview.sublime-settings",
+            "default": "{\n$0\n}\n"
+        }
     }
 ]
