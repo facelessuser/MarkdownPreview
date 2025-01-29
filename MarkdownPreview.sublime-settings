@@ -215,7 +215,7 @@
     // "github_oauth_token": "secret",
 
     /*
-        Use a personal access token to parse GitLab Flavored Markdown with
+        Use a personal access token with `read_api` scope to parse GitLab Flavored Markdown with
         the GitLab API. For info on token creation, see this page:
         https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
 
