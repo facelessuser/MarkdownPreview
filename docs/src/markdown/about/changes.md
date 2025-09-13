@@ -5,7 +5,7 @@
 -   **NEW**: Add 'Preferences: MarkdownPreview Settings' to Command Palette.
 -   **NEW**: Opt-in to python 3.8.
 -   **NEW**: Allow GitHub style to adjust to window width.
--   **NEW**: Clarify gitlab access token in MarkdownPreview.sublime-settings.
+-   **NEW**: Clarify GitLab access token in MarkdownPreview.sublime-settings.
 
 ## 2.5
 
