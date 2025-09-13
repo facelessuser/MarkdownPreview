@@ -1,4 +1,3 @@
-[![Build][github-ci-image]][github-ci-link]
 [![Package Control Downloads][pc-image]][pc-link]
 ![License][license-image]
 
@@ -58,8 +57,6 @@ The code is available at under the [MIT license][license].
 [pymd]: https://github.com/Python-Markdown/markdown
 [pymdownx-docs]: http://facelessuser.github.io/pymdown-extensions/usage_notes/
 [tommi]: https://github.com/tommi
-[github-ci-image]: https://github.com/facelessuser/MarkdownPreview/workflows/build/badge.svg
-[github-ci-link]: https://github.com/facelessuser/MarkdownPreview/actions?workflow=build
 [pc-image]: https://img.shields.io/packagecontrol/dt/MarkdownPreview.svg?logo=sublime%20text&logoColor=cccccc
 [pc-link]: https://packagecontrol.io/packages/MarkdownPreview
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg

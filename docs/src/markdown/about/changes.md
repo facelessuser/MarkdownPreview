@@ -1,5 +1,12 @@
 # Changes
 
+## 2.6
+
+-   **NEW**: Add 'Preferences: MarkdownPreview Settings' to Command Palette.
+-   **NEW**: Opt-in to python 3.8.
+-   **NEW**: Allow GitHub style to adjust to window width.
+-   **NEW**: Clarify gitlab access token in MarkdownPreview.sublime-settings.
+
 ## 2.5
 
 -   **NEW**: Update to latest GitHub styling. Dark mode is triggered by system theme.

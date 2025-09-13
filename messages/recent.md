@@ -1,4 +1,4 @@
-# MarkdownPreview 2.4.0
+# MarkdownPreview 2.6
 
 New release!
 
@@ -8,9 +8,9 @@ please try restarting.
 Please see https://facelessuser.github.io/MarkdownPreview for more info about  
 the release.
 
-## 2.4.0
+## 2.6
 
-- **NEW**: Add `mermaid.js` support.
-- **NEW**: Remove border from default styling of `markdown` and `github`.
-- **NEW**: Exit out of `on_post_save` even quicker if no work is needed.
-- **FIX**: `title` in YAML frontmatter should be handled case insensitively.
+-   **NEW**: Add 'Preferences: MarkdownPreview Settings' to Command Palette.
+-   **NEW**: Opt-in to python 3.8.
+-   **NEW**: Allow GitHub style to adjust to window width.
+-   **NEW**: Clarify gitlab access token in MarkdownPreview.sublime-settings.
