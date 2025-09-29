@@ -1,5 +1,9 @@
 # Changes
 
+## 2.6.1
+
+-   **FIX**: We cannot opt-in to Python 3.8 until Pygments dependency supports 3.8.
+
 ## 2.6
 
 -   **NEW**: Add 'Preferences: MarkdownPreview Settings' to Command Palette.
