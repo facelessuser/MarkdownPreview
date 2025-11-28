@@ -450,7 +450,8 @@ class Compiler(object):
             "base_path": self.settings.get('builtin').get("basepath"),
             "relative_path": relative_path,
             "absolute": absolute,
-            "tags": ' '.join(tags)
+            "tags": ' '.join(tags),
+            "file_scheme": False
         }
 
         return pathconv.run(source)

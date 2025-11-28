@@ -1,5 +1,10 @@
 # Changes
 
+## 3.0.0
+
+-   **NEW**: Updates for support in ST 4201+ that uses Python 3.13.
+-   **NEW**: Uses the latest Python Markdown and Pymdown Extensions.
+
 ## 2.6.1
 
 -   **FIX**: We cannot opt-in to Python 3.8 until Pygments dependency supports 3.8.

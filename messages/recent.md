@@ -1,4 +1,4 @@
-# MarkdownPreview 2.6
+# MarkdownPreview
 
 New release!
 
@@ -8,9 +8,7 @@ please try restarting.
 Please see https://facelessuser.github.io/MarkdownPreview for more info about  
 the release.
 
-## 2.6
+## 3.0.0
 
--   **NEW**: Add 'Preferences: MarkdownPreview Settings' to Command Palette.
--   **NEW**: Opt-in to python 3.8.
--   **NEW**: Allow GitHub style to adjust to window width.
--   **NEW**: Clarify gitlab access token in MarkdownPreview.sublime-settings.
+-   **NEW**: Updates for support in ST 4201+ that uses Python 3.13.
+-   **NEW**: Uses the latest Python Markdown and Pymdown Extensions.

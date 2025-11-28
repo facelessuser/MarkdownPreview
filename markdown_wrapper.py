@@ -1,7 +1,7 @@
 """Markdown Preview wrapper."""
 from __future__ import absolute_import
 import traceback
-from markdown import Markdown, util, version_info
+from markdown import Markdown
 from markdown.extensions import Extension
 
 
@@ -10,7 +10,7 @@ class StMarkdown(Markdown):
 
     def __init__(self, *args, **kwargs):
         """Initialize."""
-        Markdown.__init__(self, *args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.Meta = {}
 
     def registerExtensions(self, extensions, configs):  # noqa
@@ -25,17 +25,14 @@ class StMarkdown(Markdown):
         We are overriding this in order to gracefully handle bad extensions
         and to prevent old deprecated style of 'extensions(option=value)'.
         """
-        md3 = version_info[0] > 2
+
         for ext in extensions:
             try:
                 # Make sure we aren't using old form `extension(option=value)`
-                if isinstance(ext, util.string_type) and ('(' not in ext):
-                    ext = self.build_extension(ext, configs.get(ext, []))
+                if isinstance(ext, str) and ('(' not in ext):
+                    ext = self.build_extension(ext, configs.get(ext, {}))
                 if isinstance(ext, Extension):
-                    if md3:
-                        ext._extendMarkdown(self)
-                    else:
-                        ext.extendMarkdown(self, globals())
+                    ext.extendMarkdown(self)
                 elif ext is not None:
                     raise TypeError(
                         'Extension "%s.%s" must be of type: "markdown.Extension"'
