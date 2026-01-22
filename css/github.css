@@ -124,6 +124,7 @@ body {
 }
 
 .markdown-body .octicon-link:before {
+  color: var(--color-fg-default);
   font: normal normal normal 16px/1 octicons-link;
   display: inline-block;
   text-decoration: none;
@@ -139,6 +140,7 @@ body {
 }
 
 .markdown-body {
+  padding: 45px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   margin: 0;
@@ -156,12 +158,11 @@ body {
   vertical-align: text-bottom;
 }
 
-.markdown-body h1:hover .anchor .octicon-link:before,
-.markdown-body h2:hover .anchor .octicon-link:before,
-.markdown-body h3:hover .anchor .octicon-link:before,
-.markdown-body h4:hover .anchor .octicon-link:before,
-.markdown-body h5:hover .anchor .octicon-link:before,
-.markdown-body h6:hover .anchor .octicon-link:before {
+.markdown-body .markdown-heading:hover .anchor {
+  opacity: 1;
+}
+
+.markdown-body .markdown-heading:hover .anchor .octicon-link::before {
   width: 16px;
   height: 16px;
   content: ' ';
@@ -540,11 +541,23 @@ body {
   color: var(--color-danger-fg);
 }
 
+.markdown-body .markdown-heading {
+  position:  relative;
+}
+
 .markdown-body .anchor {
-  float: left;
-  padding-right: 4px;
-  margin-left: -20px;
+  position: absolute;
+  top: 30%;
+  left: -28px;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  margin: auto;
   line-height: 1;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
 }
 
 .markdown-body .anchor:focus {

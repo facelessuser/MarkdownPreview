@@ -1,5 +1,9 @@
 # Changes
 
+## 3.0.1
+
+-   **NEW**: Fix GitHub header links.
+
 ## 3.0.0
 
 -   **NEW**: Updates for support in ST 4201+ that uses Python 3.13.

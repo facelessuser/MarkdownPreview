@@ -774,22 +774,15 @@ class GithubCompiler(OnlineCompiler):
 
     def postprocess_inject_header_id(self, html):
         """Insert header ids when no anchors are present."""
-        from pymdownx.slugs import uslugify
-        unique = {}
-        re_header = re.compile(r'(?P<open><h([1-6])>)(?P<text>.*?)(?P<close></h\2>)', re.DOTALL)
+
+        re_header = re.compile(
+            r'(?P<open><h([1-6]) class="heading-element">)(?P<text>.*?)(?P<close></h\2>\s*'
+            r'<a id="user-content-(?P<id>[^\"]+)")',
+            re.DOTALL
+        )
 
         def inject_id(m):
-            header_id = uslugify(m.group('text'), '-')
-            if header_id == '':
-                return m.group(0)
-            # Append a dash and number for uniqueness if needed
-            value = unique.get(header_id, None)
-            if value is None:
-                unique[header_id] = 1
-            else:
-                unique[header_id] += 1
-                header_id += "-%d" % value
-            return m.group('open')[:-1] + (' id="%s">' % header_id) + m.group('text') + m.group('close')
+            return m.group('open')[:-1] + (' id="%s">' % m.group('id')) + m.group('text') + m.group('close')
 
         return re_header.sub(inject_id, html)
 
