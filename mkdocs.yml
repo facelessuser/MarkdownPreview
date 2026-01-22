@@ -4,7 +4,7 @@ repo_url: https://github.com/facelessuser/MarkdownPreview
 edit_uri: tree/master/docs/src/markdown
 site_description: Markdown preview and build plugin for Sublime Text
 copyright: |
-  Copyright &copy; 2018 - 2025 <a href="https://github.com/facelessuser"  target="_blank" rel="noopener">Isaac Muse</a>
+  Copyright &copy; 2018 - 2026 <a href="https://github.com/facelessuser"  target="_blank" rel="noopener">Isaac Muse</a>
 
 docs_dir: docs/src/markdown
 theme:
