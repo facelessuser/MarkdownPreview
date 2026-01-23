@@ -1,5 +1,16 @@
 # Changes
 
+## 3.1.0
+
+-   **NEW**: Update styling for `markdown` parser and add dark mode for it. UML diagrams do not currently respond to the
+    mode, but everything else will.
+-   **NEW**: Added new `github_dynamic` CSS for code highlighting in light and dark mode with the `markdown` parser. It
+    is the new default.
+-   **NEW**: Updated the embeded fonts in `markdown`. This caused the default `permalink` setting to be updated to
+    `\ue806`.
+-   **FIX**:  Update header link insertion and styling to work with latest GitHub Markdown format returned via their
+    API.
+
 ## 3.0.1
 
 -   **NEW**: Fix GitHub header links.
