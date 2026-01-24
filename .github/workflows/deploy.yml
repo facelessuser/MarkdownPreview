@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     tags:
-    - 'st3-*'
+    - 'st4-*'
 
 jobs:
 

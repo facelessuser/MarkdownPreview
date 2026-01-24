@@ -1,5 +1,17 @@
 # Changes
 
+## 2.7.0
+
+-   **NEW**: Fix GitHub header links.
+-   **NEW**: Update styling for `markdown` parser and add dark mode for it. UML diagrams do not currently respond to the
+    mode, but everything else will.
+-   **NEW**: Added new `github_dynamic` CSS for code highlighting in light and dark mode with the `markdown` parser. It
+    is the new default.
+-   **NEW**: Updated the embedded fonts in `markdown`. This caused the default `permalink` setting to be updated to
+    `\ue806`.
+-   **FIX**:  Update header link insertion and styling to work with latest GitHub Markdown format returned via their
+    API.
+
 ## 2.6.1
 
 -   **FIX**: We cannot opt-in to Python 3.8 until Pygments dependency supports 3.8.
