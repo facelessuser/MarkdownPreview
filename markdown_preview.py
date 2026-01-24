@@ -26,7 +26,8 @@ _CANNOT_CONVERT = 'cannot convert markdown'
 
 PYGMENTS_LOCAL = {
     'github': 'css/pygments/github.css',
-    'github2014': 'css/pygments/github2014.css'
+    'github2014': 'css/pygments/github2014.css',
+    'github_dynamic': "css/pygments/github_dynamic.css"
 }
 
 RELOAD_JS = """<script async>

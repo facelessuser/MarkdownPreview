@@ -15,7 +15,7 @@
 
     # Settings overrides
     settings:
-        pygments_style: github
+        pygments_style: github_dynamic
         js:
           - https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
           - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
@@ -34,10 +34,11 @@
           - markdown.extensions.tables
           - markdown.extensions.abbr
           - markdown.extensions.toc:
-              permalink: "\ue157"
+              permalink: "\ue806"
           - markdown.extensions.smarty
           - markdown.extensions.meta
           - markdown.extensions.admonition
+          - pymdownx.details
           - pymdownx.arithmatex:
               generic: true
           - markdown.extensions.md_in_html
@@ -118,6 +119,18 @@ This is a paragraph.
 I am still part of the paragraph.
 
 New paragraph.
+
+## Blockquotes
+
+```
+> This is a blockquote.
+>
+> It can contain _markdown_ content.
+```
+
+> This is a blockquote.
+>
+> It can contain _markdown_ content.
 
 ## Inline
 
@@ -593,27 +606,10 @@ Modified Text
 ## Admonition
 
 ```
-!!! Attention "Success!"
-    You can use inline ~~stuff~~ markup too!
-
-!!! Hint "Info!"
-    - Here is some info.
-    - And some more
-
-!!! Caution "Warning!"
-    - [X] Make sure you turn off the stove
-    - [X] Don't run with scissors
-
-!!! Danger "Alert!"
-    You really need to read [this](#admonition)!
-
-!!! Question "Question?"
-    Are you serious?
-
 !!! Note "Note"
     :smile:
 
-    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them. But you will notice that the styles don't always play nice with each other.  Additional CSS could fix this though.
+    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
 
     Stuff like _this_ works too.
 
@@ -623,31 +619,25 @@ Modified Text
     | ~~Orange~~    | Oranges         | **Carrot**   |
     | Green         | ~~***Pears***~~ | Spinach      |
 
-!!! Unknown "Title"
-    Default class style
+!!! tip "Tip!"
+    - Here is some info.
+    - And some more
+
+!!! warning "Warning!"
+    - [X] Make sure you turn off the stove
+    - [X] Don't run with scissors
+
+!!! caution "Alert!"
+    You really need to read [this](#admonition)!
+
+!!! important
+    This is important
 ```
 
-!!! Attention "Success!"
-    You can use inline ~~stuff~~ markup too!
-
-!!! Hint "Info!"
-    - Here is some info.
-    - And some more
-
-!!! Caution "Warning!"
-    - [X] Make sure you turn off the stove
-    - [X] Don't run with scissors
-
-!!! Danger "Alert!"
-    You really need to read [this](#admonition)!
-
-!!! Question "Question?"
-    Are you serious?
-
 !!! Note "Note"
     :smile:
 
-    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them. But you will notice that the styles don't always play nice with each other.  Additional CSS could fix this though.
+    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
 
     Stuff like _this_ works too.
 
@@ -657,8 +647,84 @@ Modified Text
     | ~~Orange~~    | Oranges         | **Carrot**   |
     | Green         | ~~***Pears***~~ | Spinach      |
 
-!!! Unknown "Title"
+!!! tip "Tip!"
+    - Here is some info.
+    - And some more
+
+!!! warning "Warning!"
+    - [X] Make sure you turn off the stove
+    - [X] Don't run with scissors
+
+!!! caution "Alert!"
+    You really need to read [this](#admonition)!
+
+!!! important
+    This is important
+
+
+## Collapsible Alerts (Details)
+
+```
+??? "Title"
     Default class style
+
+??? Note "Note"
+    :smile:
+
+    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+
+    Stuff like _this_ works too.
+
+    | _Colors_      | Fruits          | Vegetable    |
+    | ------------- |:---------------:| ------------:|
+    | Red           | *Apple*         | Pepper       |
+    | ~~Orange~~    | Oranges         | **Carrot**   |
+    | Green         | ~~***Pears***~~ | Spinach      |
+
+??? tip "Tip!"
+    - Here is some info.
+    - And some more
+
+??? warning "Warning!"
+    - [X] Make sure you turn off the stove
+    - [X] Don't run with scissors
+
+??? caution "Alert!"
+    You really need to read [this](#admonition)!
+
+??? important
+    This is important
+```
+
+??? "Title"
+    Default class style
+
+??? Note "Note"
+    :smile:
+
+    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+
+    Stuff like _this_ works too.
+
+    | _Colors_      | Fruits          | Vegetable    |
+    | ------------- |:---------------:| ------------:|
+    | Red           | *Apple*         | Pepper       |
+    | ~~Orange~~    | Oranges         | **Carrot**   |
+    | Green         | ~~***Pears***~~ | Spinach      |
+
+??? tip "Tip!"
+    - Here is some info.
+    - And some more
+
+??? warning "Warning!"
+    - [X] Make sure you turn off the stove
+    - [X] Don't run with scissors
+
+??? caution "Alert!"
+    You really need to read [this](#admonition)!
+
+??? important
+    This is important
 
 ## Github Emoji
 
@@ -786,6 +852,25 @@ This will still be parsed
 as a fenced code block.
 ```
 
+```python
+from collections.abc import Iterator
+
+
+# This is an example
+class Math:
+    @staticmethod
+    def fib(n: int) -> Iterator[int]:
+        """Fibonacci series up to n."""
+        a, b = 0, 1
+        while a < n:
+            yield a
+            a, b = b, a + b
+
+
+result = sum(Math.fib(42))
+print(f"The answer is {result}")
+```
+
 - This is a list that contains multiple code blocks.
 
     - Here is an indented block
@@ -816,6 +901,25 @@ as a fenced code block.
 ```
 This will still be parsed
 as a fenced code block.
+```
+
+```python
+from collections.abc import Iterator
+
+
+# This is an example
+class Math:
+    @staticmethod
+    def fib(n: int) -> Iterator[int]:
+        """Fibonacci series up to n."""
+        a, b = 0, 1
+        while a < n:
+            yield a
+            a, b = b, a + b
+
+
+result = sum(Math.fib(42))
+print(f"The answer is {result}")
 ```
 
 - This is a list that contains multiple code blocks.

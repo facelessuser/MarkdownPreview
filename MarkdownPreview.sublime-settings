@@ -55,9 +55,9 @@
     /*
         Name of the Pygments style to inject.
 
-        Available styles are those provided by Pygments plus "github" and "github2014".
+        Available styles are those provided by Pygments plus "github",  "github2014", "github_dynamic".
     */
-    "pygments_style": "github",
+    "pygments_style": "github_dynamic",
 
     /*
         Class to prepend to Pygments CSS styles.
@@ -96,7 +96,7 @@
         {
             "markdown.extensions.toc":
             {
-                "permalink": "\ue157"
+                "permalink": "\ue806"
             }
         },
         "markdown.extensions.meta",
@@ -104,6 +104,7 @@
         "markdown.extensions.smarty",
         "markdown.extensions.wikilinks",
         "markdown.extensions.admonition",
+        "markdown.pymdownx.details",
 
         // PyMdown extensions that help give a GitHub-ish feel
         {

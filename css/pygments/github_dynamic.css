@@ -1,0 +1,156 @@
+/* GitHub Dark from Pygments with igher background */
+@media (prefers-color-scheme: dark) {
+  body,
+  [data-theme="dark"] {
+  	%(css_class)s {background-color:#161b22; color:#F8F8F2;}
+		%(css_class)s .hll { background-color: #6e7681 }
+		%(css_class)s .c { color: #8B949E; font-style: italic } /* Comment */
+		%(css_class)s .err { color: #F85149 } /* Error */
+		%(css_class)s .esc { color: #E6EDF3 } /* Escape */
+		%(css_class)s .g { color: #E6EDF3 } /* Generic */
+		%(css_class)s .k { color: #FF7B72 } /* Keyword */
+		%(css_class)s .l { color: #A5D6FF } /* Literal */
+		%(css_class)s .n { color: #E6EDF3 } /* Name */
+		%(css_class)s .o { color: #FF7B72; font-weight: bold } /* Operator */
+		%(css_class)s .x { color: #E6EDF3 } /* Other */
+		%(css_class)s .p { color: #E6EDF3 } /* Punctuation */
+		%(css_class)s .ch { color: #8B949E; font-style: italic } /* Comment.Hashbang */
+		%(css_class)s .cm { color: #8B949E; font-style: italic } /* Comment.Multiline */
+		%(css_class)s .cp { color: #8B949E; font-weight: bold; font-style: italic } /* Comment.Preproc */
+		%(css_class)s .cpf { color: #8B949E; font-style: italic } /* Comment.PreprocFile */
+		%(css_class)s .c1 { color: #8B949E; font-style: italic } /* Comment.Single */
+		%(css_class)s .cs { color: #8B949E; font-weight: bold; font-style: italic } /* Comment.Special */
+		%(css_class)s .gd { color: #FFA198; background-color: #490202 } /* Generic.Deleted */
+		%(css_class)s .ge { color: #E6EDF3; font-style: italic } /* Generic.Emph */
+		%(css_class)s .ges { color: #E6EDF3; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+		%(css_class)s .gr { color: #FFA198 } /* Generic.Error */
+		%(css_class)s .gh { color: #79C0FF; font-weight: bold } /* Generic.Heading */
+		%(css_class)s .gi { color: #56D364; background-color: #0F5323 } /* Generic.Inserted */
+		%(css_class)s .go { color: #8B949E } /* Generic.Output */
+		%(css_class)s .gp { color: #8B949E } /* Generic.Prompt */
+		%(css_class)s .gs { color: #E6EDF3; font-weight: bold } /* Generic.Strong */
+		%(css_class)s .gu { color: #79C0FF } /* Generic.Subheading */
+		%(css_class)s .gt { color: #FF7B72 } /* Generic.Traceback */
+		%(css_class)s .g-Underline { color: #E6EDF3; text-decoration: underline } /* Generic.Underline */
+		%(css_class)s .kc { color: #79C0FF } /* Keyword.Constant */
+		%(css_class)s .kd { color: #FF7B72 } /* Keyword.Declaration */
+		%(css_class)s .kn { color: #FF7B72 } /* Keyword.Namespace */
+		%(css_class)s .kp { color: #79C0FF } /* Keyword.Pseudo */
+		%(css_class)s .kr { color: #FF7B72 } /* Keyword.Reserved */
+		%(css_class)s .kt { color: #FF7B72 } /* Keyword.Type */
+		%(css_class)s .ld { color: #79C0FF } /* Literal.Date */
+		%(css_class)s .m { color: #A5D6FF } /* Literal.Number */
+		%(css_class)s .s { color: #A5D6FF } /* Literal.String */
+		%(css_class)s .na { color: #E6EDF3 } /* Name.Attribute */
+		%(css_class)s .nb { color: #E6EDF3 } /* Name.Builtin */
+		%(css_class)s .nc { color: #F0883E; font-weight: bold } /* Name.Class */
+		%(css_class)s .no { color: #79C0FF; font-weight: bold } /* Name.Constant */
+		%(css_class)s .nd { color: #D2A8FF; font-weight: bold } /* Name.Decorator */
+		%(css_class)s .ni { color: #FFA657 } /* Name.Entity */
+		%(css_class)s .ne { color: #F0883E; font-weight: bold } /* Name.Exception */
+		%(css_class)s .nf { color: #D2A8FF; font-weight: bold } /* Name.Function */
+		%(css_class)s .nl { color: #79C0FF; font-weight: bold } /* Name.Label */
+		%(css_class)s .nn { color: #FF7B72 } /* Name.Namespace */
+		%(css_class)s .nx { color: #E6EDF3 } /* Name.Other */
+		%(css_class)s .py { color: #79C0FF } /* Name.Property */
+		%(css_class)s .nt { color: #7EE787 } /* Name.Tag */
+		%(css_class)s .nv { color: #79C0FF } /* Name.Variable */
+		%(css_class)s .ow { color: #FF7B72; font-weight: bold } /* Operator.Word */
+		%(css_class)s .pm { color: #E6EDF3 } /* Punctuation.Marker */
+		%(css_class)s .w { color: #6E7681 } /* Text.Whitespace */
+		%(css_class)s .mb { color: #A5D6FF } /* Literal.Number.Bin */
+		%(css_class)s .mf { color: #A5D6FF } /* Literal.Number.Float */
+		%(css_class)s .mh { color: #A5D6FF } /* Literal.Number.Hex */
+		%(css_class)s .mi { color: #A5D6FF } /* Literal.Number.Integer */
+		%(css_class)s .mo { color: #A5D6FF } /* Literal.Number.Oct */
+		%(css_class)s .sa { color: #79C0FF } /* Literal.String.Affix */
+		%(css_class)s .sb { color: #A5D6FF } /* Literal.String.Backtick */
+		%(css_class)s .sc { color: #A5D6FF } /* Literal.String.Char */
+		%(css_class)s .dl { color: #79C0FF } /* Literal.String.Delimiter */
+		%(css_class)s .sd { color: #A5D6FF } /* Literal.String.Doc */
+		%(css_class)s .s2 { color: #A5D6FF } /* Literal.String.Double */
+		%(css_class)s .se { color: #79C0FF } /* Literal.String.Escape */
+		%(css_class)s .sh { color: #79C0FF } /* Literal.String.Heredoc */
+		%(css_class)s .si { color: #A5D6FF } /* Literal.String.Interpol */
+		%(css_class)s .sx { color: #A5D6FF } /* Literal.String.Other */
+		%(css_class)s .sr { color: #79C0FF } /* Literal.String.Regex */
+		%(css_class)s .s1 { color: #A5D6FF } /* Literal.String.Single */
+		%(css_class)s .ss { color: #A5D6FF } /* Literal.String.Symbol */
+		%(css_class)s .bp { color: #E6EDF3 } /* Name.Builtin.Pseudo */
+		%(css_class)s .fm { color: #D2A8FF; font-weight: bold } /* Name.Function.Magic */
+		%(css_class)s .vc { color: #79C0FF } /* Name.Variable.Class */
+		%(css_class)s .vg { color: #79C0FF } /* Name.Variable.Global */
+		%(css_class)s .vi { color: #79C0FF } /* Name.Variable.Instance */
+		%(css_class)s .vm { color: #79C0FF } /* Name.Variable.Magic */
+		%(css_class)s .il { color: #A5D6FF } /* Literal.Number.Integer.Long */
+  }
+}
+
+/* Taken from github.css */
+@media (prefers-color-scheme: light) {
+  body,
+  [data-theme="light"] {
+  	%(css_class)s {background-color:#f7f7f7;color:#333333;}
+		%(css_class)s .hll {background-color:#ffffcc;}
+		%(css_class)s .c{color:#999988;font-style:italic}
+		%(css_class)s .err{color:#a61717;background-color:#e3d2d2}
+		%(css_class)s .k{font-weight:bold}
+		%(css_class)s .o{font-weight:bold}
+		%(css_class)s .cm{color:#999988;font-style:italic}
+		%(css_class)s .cp{color:#999999;font-weight:bold}
+		%(css_class)s .c1{color:#999988;font-style:italic}
+		%(css_class)s .cs{color:#999999;font-weight:bold;font-style:italic}
+		%(css_class)s .gd{color:#000000;background-color:#ffdddd}
+		%(css_class)s .ge{font-style:italic}
+		%(css_class)s .gr{color:#aa0000}
+		%(css_class)s .gh{color:#999999}
+		%(css_class)s .gi{color:#000000;background-color:#ddffdd}
+		%(css_class)s .go{color:#888888}
+		%(css_class)s .gp{color:#555555}
+		%(css_class)s .gs{font-weight:bold}
+		%(css_class)s .gu{color:#800080;font-weight:bold}
+		%(css_class)s .gt{color:#aa0000}
+		%(css_class)s .kc{font-weight:bold}
+		%(css_class)s .kd{font-weight:bold}
+		%(css_class)s .kn{font-weight:bold}
+		%(css_class)s .kp{font-weight:bold}
+		%(css_class)s .kr{font-weight:bold}
+		%(css_class)s .kt{color:#445588;font-weight:bold}
+		%(css_class)s .m{color:#009999}
+		%(css_class)s .s{color:#dd1144}
+		%(css_class)s .n{color:#333333}
+		%(css_class)s .na{color:teal}
+		%(css_class)s .nb{color:#0086b3}
+		%(css_class)s .nc{color:#445588;font-weight:bold}
+		%(css_class)s .no{color:teal}
+		%(css_class)s .ni{color:purple}
+		%(css_class)s .ne{color:#990000;font-weight:bold}
+		%(css_class)s .nf{color:#990000;font-weight:bold}
+		%(css_class)s .nn{color:#555555}
+		%(css_class)s .nt{color:navy}
+		%(css_class)s .nv{color:teal}
+		%(css_class)s .ow{font-weight:bold}
+		%(css_class)s .w{color:#bbbbbb}
+		%(css_class)s .mf{color:#009999}
+		%(css_class)s .mh{color:#009999}
+		%(css_class)s .mi{color:#009999}
+		%(css_class)s .mo{color:#009999}
+		%(css_class)s .sb{color:#dd1144}
+		%(css_class)s .sc{color:#dd1144}
+		%(css_class)s .sd{color:#dd1144}
+		%(css_class)s .s2{color:#dd1144}
+		%(css_class)s .se{color:#dd1144}
+		%(css_class)s .sh{color:#dd1144}
+		%(css_class)s .si{color:#dd1144}
+		%(css_class)s .sx{color:#dd1144}
+		%(css_class)s .sr{color:#009926}
+		%(css_class)s .s1{color:#dd1144}
+		%(css_class)s .ss{color:#990073}
+		%(css_class)s .bp{color:#999999}
+		%(css_class)s .vc{color:teal}
+		%(css_class)s .vg{color:teal}
+		%(css_class)s .vi{color:teal}
+		%(css_class)s .il{color:#009999}
+		%(css_class)s .gc{color:#999;background-color:#EAF2F5}
+  }
+}
