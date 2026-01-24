@@ -8,12 +8,9 @@
     is the new default.
 -   **NEW**: Updated the embedded fonts in `markdown`. This caused the default `permalink` setting to be updated to
     `\ue806`.
+-   **FIX**: Fix GitHub header links.
 -   **FIX**:  Update header link insertion and styling to work with latest GitHub Markdown format returned via their
     API.
-
-## 3.0.1
-
--   **NEW**: Fix GitHub header links.
 
 ## 3.0.0
 
