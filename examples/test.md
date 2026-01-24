@@ -76,6 +76,8 @@
                 - name: mermaid
                   class: mermaid
                   format: !!python/name:pymdownx.superfences.fence_code_format
+          - pymdownx.quotes:
+              callouts: true
 ---
 test: This tests the meta extension
 title: This title will be overridden by YAML
@@ -606,125 +608,132 @@ Modified Text
 ## Admonition
 
 ```
-!!! Note "Note"
-    :smile:
+> [!Note]
+> :smile:
+>
+> > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+>
+> Stuff like _this_ works too.
+>
+> | _Colors_      | Fruits          | Vegetable    |
+> | ------------- |:---------------:| ------------:|
+> | Red           | *Apple*         | Pepper       |
+> | ~~Orange~~    | Oranges         | **Carrot**   |
+> | Green         | ~~***Pears***~~ | Spinach      |
 
-    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+> [!tip] Tip!
+> - Here is some info.
+> - And some more
 
-    Stuff like _this_ works too.
+> [!warning] Warning!
+> - [X] Make sure you turn off the stove
+> - [X] Don't run with scissors
 
-    | _Colors_      | Fruits          | Vegetable    |
-    | ------------- |:---------------:| ------------:|
-    | Red           | *Apple*         | Pepper       |
-    | ~~Orange~~    | Oranges         | **Carrot**   |
-    | Green         | ~~***Pears***~~ | Spinach      |
+> [!caution] Alert!
+> You really need to read [this](#admonition)!
 
-!!! tip "Tip!"
-    - Here is some info.
-    - And some more
-
-!!! warning "Warning!"
-    - [X] Make sure you turn off the stove
-    - [X] Don't run with scissors
-
-!!! caution "Alert!"
-    You really need to read [this](#admonition)!
-
-!!! important
-    This is important
+> [!important]
+> This is important
 ```
 
-!!! Note "Note"
-    :smile:
+> [!Note]
+> :smile:
+>
+> > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+>
+> Stuff like _this_ works too.
+>
+> | _Colors_      | Fruits          | Vegetable    |
+> | ------------- |:---------------:| ------------:|
+> | Red           | *Apple*         | Pepper       |
+> | ~~Orange~~    | Oranges         | **Carrot**   |
+> | Green         | ~~***Pears***~~ | Spinach      |
 
-    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+> [!tip] Tip!
+> - Here is some info.
+> - And some more
 
-    Stuff like _this_ works too.
+> [!warning] Warning!
+> - [X] Make sure you turn off the stove
+> - [X] Don't run with scissors
 
-    | _Colors_      | Fruits          | Vegetable    |
-    | ------------- |:---------------:| ------------:|
-    | Red           | *Apple*         | Pepper       |
-    | ~~Orange~~    | Oranges         | **Carrot**   |
-    | Green         | ~~***Pears***~~ | Spinach      |
+> [!caution] Alert!
+> You really need to read [this](#admonition)!
 
-!!! tip "Tip!"
-    - Here is some info.
-    - And some more
-
-!!! warning "Warning!"
-    - [X] Make sure you turn off the stove
-    - [X] Don't run with scissors
-
-!!! caution "Alert!"
-    You really need to read [this](#admonition)!
-
-!!! important
-    This is important
-
+> [!important]
+> This is important
 
 ## Collapsible Alerts (Details)
 
 ```
-??? "Title"
-    Default class style
+<details markdown>
+<summary>Summary</summary>
 
-??? Note "Note"
-    :smile:
+Content **section**.
 
-    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+</details>
 
-    Stuff like _this_ works too.
+> [!Note]+
+> :smile:
+>
+> > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+>
+> Stuff like _this_ works too.
+>
+> | _Colors_      | Fruits          | Vegetable    |
+> | ------------- |:---------------:| ------------:|
+> | Red           | *Apple*         | Pepper       |
+> | ~~Orange~~    | Oranges         | **Carrot**   |
+> | Green         | ~~***Pears***~~ | Spinach      |
 
-    | _Colors_      | Fruits          | Vegetable    |
-    | ------------- |:---------------:| ------------:|
-    | Red           | *Apple*         | Pepper       |
-    | ~~Orange~~    | Oranges         | **Carrot**   |
-    | Green         | ~~***Pears***~~ | Spinach      |
+> [!tip]+ Tip!
+> - Here is some info.
+> - And some more
 
-??? tip "Tip!"
-    - Here is some info.
-    - And some more
+> [!warning]+ Warning!
+> - [X] Make sure you turn off the stove
+> - [X] Don't run with scissors
 
-??? warning "Warning!"
-    - [X] Make sure you turn off the stove
-    - [X] Don't run with scissors
+> [!caution]+ Alert!
+> You really need to read [this](#admonition)!
 
-??? caution "Alert!"
-    You really need to read [this](#admonition)!
-
-??? important
-    This is important
+> [!important]+
+> This is important
 ```
 
-??? "Title"
-    Default class style
+<details markdown>
+<summary>Summary</summary>
 
-??? Note "Note"
-    :smile:
+Content **section**.
 
-    > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+</details>
 
-    Stuff like _this_ works too.
+> [!Note]+
+> :smile:
+>
+> > Not all markup can be placed in these boxes, but you can fit all sorts of things in them.
+>
+> Stuff like _this_ works too.
+>
+> | _Colors_      | Fruits          | Vegetable    |
+> | ------------- |:---------------:| ------------:|
+> | Red           | *Apple*         | Pepper       |
+> | ~~Orange~~    | Oranges         | **Carrot**   |
+> | Green         | ~~***Pears***~~ | Spinach      |
 
-    | _Colors_      | Fruits          | Vegetable    |
-    | ------------- |:---------------:| ------------:|
-    | Red           | *Apple*         | Pepper       |
-    | ~~Orange~~    | Oranges         | **Carrot**   |
-    | Green         | ~~***Pears***~~ | Spinach      |
+> [!tip]+ Tip!
+> - Here is some info.
+> - And some more
 
-??? tip "Tip!"
-    - Here is some info.
-    - And some more
+> [!warning]+ Warning!
+> - [X] Make sure you turn off the stove
+> - [X] Don't run with scissors
 
-??? warning "Warning!"
-    - [X] Make sure you turn off the stove
-    - [X] Don't run with scissors
+> [!caution]+ Alert!
+> You really need to read [this](#admonition)!
 
-??? caution "Alert!"
-    You really need to read [this](#admonition)!
-
-??? important
-    This is important
+> [!important]+
+> This is important
 
 ## Github Emoji
 

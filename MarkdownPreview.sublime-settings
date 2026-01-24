@@ -155,6 +155,11 @@
                     "non_standard_image_path": "https://github.githubassets.com/images/icons/emoji/"
                 }
             }
+        },
+        {
+            "pymdownx.quotes": {
+                "callouts": true
+            }
         }
     ],
 
