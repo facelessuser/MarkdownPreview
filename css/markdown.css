@@ -628,7 +628,7 @@ body .markdown-body
 .markdown-body .admonition,
 .markdown-body details[class] {
   position: relative;
-  border-left: 6px solid var(--color-fg);
+  border-left: 4px solid var(--color-fg);
   padding: 10px 10px 10px 10px;
 }
 
@@ -760,25 +760,25 @@ body .markdown-body
 .markdown-body .question:is(.admonition, details[class]),
 .markdown-body .important:is(.admonition, details[class]),
 .markdown-body .attention:is(.admonition, details[class]) {
-  border-left: 6px solid var(--color-important-emphasis);
+  border-left-color: var(--color-important-emphasis);
 }
 
 .markdown-body .warning:is(.admonition, details[class]) {
-  border-left: 6px solid var(--color-warning-emphasis);
+  border-left-color: var(--color-warning-emphasis);
 }
 
 .markdown-body .tip:is(.admonition, details[class]),
 .markdown-body .hint:is(.admonition, details[class]) {
-  border-left: 6px solid var(--color-tip-emphasis);
+  border-left-color: var(--color-tip-emphasis);
 }
 
 .markdown-body .caution:is(.admonition, details[class]),
 .markdown-body .danger:is(.admonition, details[class]) {
-  border-left: 6px solid var(--color-caution-emphasis);
+  border-left-color: var(--color-caution-emphasis);
 }
 
 .markdown-body .note:is(.admonition, details[class]) {
-  border-left: 6px solid var(--color-note-emphasis);
+  border-left-color: var(--color-note-emphasis);
 }
 
 .markdown-body .admonition>*:first-child,
