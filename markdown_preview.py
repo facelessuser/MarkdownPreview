@@ -580,6 +580,7 @@ class Compiler(object):
 
             html = load_utf8(html_template)
             html = html.replace('{{ HEAD }}', head, 1)
+            html = html.replace('{{ THEME }}', self.settings.get('theme', 'auto'))
             html = html.replace('{{ BODY }}', body, 1)
         else:
             html = '<!DOCTYPE html>'
@@ -590,7 +591,7 @@ class Compiler(object):
             html += self.get_javascript()
             html += self.get_highlight()
             html += self.get_title()
-            html += '</head><body>'
+            html += f'</head><body data-theme="{self.settings.get('theme', 'auto')}">'
             html += '<article class="markdown-body">'
             html += body
             html += '</article>'

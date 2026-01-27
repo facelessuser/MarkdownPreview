@@ -1,5 +1,10 @@
 # Changes
 
+## 2.8.0
+
+-   **NEW**: Add `theme` option to control light/dark theme for markdown parsing styles that support it. Allow templates
+    to utilize this option as well.
+
 ## 2.7.0
 
 -   **NEW**: Fix GitHub header links.

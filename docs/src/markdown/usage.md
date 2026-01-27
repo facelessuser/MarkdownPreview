@@ -59,6 +59,7 @@ By default, Markdown Preview uses a simple template, but you can use your own cu
         Available place holders in HTML template:
         {{ HEAD }} - would be replaced by generated stylesheets, javascripts enabled above
         {{ BODY }} - would be replaced by HTML converted from markdown
+        {{ THEME }} - specifiies preferred theme `<body data-theme="{{ THEME }}"">`
 
         By setting "skip_default_stylesheet" to true you can use the styles only in your HTML
         template. In most cases you should turn this setting on to have a full-featured design.
@@ -335,10 +336,11 @@ used for code blocks can all be controlled with the following options:
     "pygments_inject_css": true,
 
     /*
-        Name of the Pygments style to inject. Available styles are the styles provided by pygments
-        plus "github" and "github2014".
+        Name of the Pygments style to inject.
+
+        Available styles are those provided by Pygments plus "github",  "github2014", "github_dynamic".
     */
-    "pygments_style": "github",
+    "pygments_style": "github_dynamic",
 
     /*
         This is the class to prepend to the pygments CSS styles. Make sure it matches whatever class(es)
@@ -350,6 +352,21 @@ used for code blocks can all be controlled with the following options:
 
 See [codehilite page](https://python-markdown.github.io/extensions/code_hilite) for more info.
 See [highlight page](https://facelessuser.github.io/pymdown-extensions/extensions/highlight/) for more info.
+
+## Light/Dark Mode
+
+The `github` parser and `markdown` parser both support light/dark mode out of the box. By default, the mode is
+auto selected based on the system mode, but if you prefer to always have dark or light mode, you can change the `theme`
+option.
+
+```js
+    /*
+        Preference for dark/light mode.
+
+        Available options are: "dark", "light", and "auto".
+    */
+    "theme": "auto",
+```
 
 ## Meta Data Support
 
