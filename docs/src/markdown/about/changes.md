@@ -22,9 +22,10 @@
 -   **NEW**: Updates for support in ST 4201+ that uses Python 3.13.
 -   **NEW**: Uses the latest Python Markdown and Pymdown Extensions.
 
-## 2.6.1
+## 2.8.0
 
--   **FIX**: We cannot opt-in to Python 3.8 until Pygments dependency supports 3.8.
+-   **NEW**: Add `theme` option to control light/dark theme for markdown parsing styles that support it. Allow templates
+    to utilize this option as well.
 
 ## 2.7.0
 
@@ -37,6 +38,10 @@
     `\ue806`.
 -   **FIX**:  Update header link insertion and styling to work with latest GitHub Markdown format returned via their
     API.
+
+## 2.6.1
+
+-   **FIX**: We cannot opt-in to Python 3.8 until Pygments dependency supports 3.8.
 
 ## 2.6
 
