@@ -59,6 +59,14 @@
     */
     "pygments_style": "github_dynamic",
 
+
+    /*
+        Preference for dark/light mode.
+
+        Available options are: "dark", "light", and "auto".
+    */
+    "theme": "auto",
+
     /*
         Class to prepend to Pygments CSS styles.
 

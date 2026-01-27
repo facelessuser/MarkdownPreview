@@ -8,14 +8,7 @@ please try restarting.
 Please see https://facelessuser.github.io/MarkdownPreview for more info about  
 the release.
 
-## 3.1.0
+## 3.2.0
 
--   **NEW**: Update styling for `markdown` parser and add dark mode for it. UML diagrams do not currently respond to the
-    mode, but everything else will.
--   **NEW**: Added new `github_dynamic` CSS for code highlighting in light and dark mode with the `markdown` parser. It
-    is the new default.
--   **NEW**: Updated the embedded fonts in `markdown`. This caused the default `permalink` setting to be updated to
-    `\ue806`.
--   **FIX**: Fix GitHub header links.
--   **FIX**:  Update header link insertion and styling to work with latest GitHub Markdown format returned via their
-    API.
+-   **NEW**: Add `theme` option to control light/dark theme for markdown parsing styles that support it. Allow templates
+    to utilize this option as well.

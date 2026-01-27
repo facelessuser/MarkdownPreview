@@ -1,5 +1,10 @@
 # Changes
 
+## 3.2.0
+
+-   **NEW**: Add `theme` option to control light/dark theme for markdown parsing styles that support it. Allow templates
+    to utilize this option as well.
+
 ## 3.1.0
 
 -   **NEW**: Update styling for `markdown` parser and add dark mode for it. UML diagrams do not currently respond to the
