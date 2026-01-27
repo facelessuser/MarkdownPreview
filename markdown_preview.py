@@ -592,7 +592,7 @@ class Compiler(object):
             html += self.get_javascript()
             html += self.get_highlight()
             html += self.get_title()
-            html += f'</head><body data-theme="{self.settings.get('theme', 'auto')}">'
+            html += '</head><body data-theme="{}">'.format(self.settings.get('theme', 'auto'))
             html += '<article class="markdown-body">'
             html += body
             html += '</article>'
