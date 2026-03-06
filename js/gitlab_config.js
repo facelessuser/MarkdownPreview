@@ -35,19 +35,24 @@ function syntaxHighlight(el) {
   el.classList.add(HIGHLIGHT_THEME);
 }
 
-function renderMermaid(el) {
+async function renderMermaid(el) {
   const source = el.textContent;
 
   // Remove any extra spans added by the backend syntax highlighting.
   Object.assign(el, { textContent: source });
 
-  mermaid.init(undefined, el, (id) => {
-    const svg = document.getElementById(id);
+  try {
+    const id = `mermaid-${Math.random().toString(36).slice(2)}`;
+    const { svg } = await mermaid.render(id, source);
 
-    svg.classList.add('mermaid');
+    const svgContainer = document.createElement('div');
+    svgContainer.innerHTML = svg;
+    const svgEl = svgContainer.querySelector('svg');
+
+    svgEl.classList.add('mermaid');
 
     // `pre > code > svg`
-    svg.closest('pre').replaceWith(svg);
+    el.closest('pre').replaceWith(svgEl);
 
     // We need to add the original source into the DOM to allow Copy-as-GFM
     // to access it.
@@ -56,14 +61,16 @@ function renderMermaid(el) {
     sourceEl.setAttribute('display', 'none');
     sourceEl.textContent = source;
 
-    svg.appendChild(sourceEl);
-  });
+    svgEl.appendChild(sourceEl);
+  } catch (err) {
+    console.error('Mermaid rendering failed:', err);
+  }
 }
 
 function renderGFM(el) {
   el.querySelectorAll('.js-syntax-highlight').forEach(syntaxHighlight);
   el.querySelectorAll('.js-render-math').forEach(renderMath);
-  el.querySelectorAll('.js-render-mermaid').forEach(renderMermaid);
+  el.querySelectorAll('.js-render-mermaid').forEach(el => renderMermaid(el));
 };
 
 document.addEventListener("DOMContentLoaded", () => {
