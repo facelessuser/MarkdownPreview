@@ -128,16 +128,18 @@ you can include the following libraries to transform `sequence` and `flow` block
 and [flowchart.js][flow] respectively.
 
 ```js
-    "js": [
-        // Required libraries to transform UML notation
-        "https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js",
+    "js": {
+        "markdown": [
+            // Required libraries to transform UML notation
+            "https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js",
 
-        // This library applies the above libraries to the fenced code blocks `flow` and `sequence`.
-        "res://MarkdownPreview/js/uml.js"
-    ]
+            // This library applies the above libraries to the fenced code blocks `flow` and `sequence`.
+            "res://MarkdownPreview/js/uml.js"
+        ]
+    }
 ```
 
 Please see the `MarkdownPreview.sublime-settings` file to see how custom fences are configured in case you need to
@@ -145,20 +147,32 @@ configure them manually. Check out our [example file][example] if using YAML fro
 
 ## Mermaid UML Support
 
-Mermaid is an alternate approach for rendering UML in a browser. Like the aforementioned [UML Support](#uml-support), it
-also uses [SuperFences extension][superfences] to create special, custom fences. Then we can just add the needed
-libraries, are custom loader, and configuration file. If you would like to tweak the configuration file, you can create
-your own and load it instead.
+Mermaid is an alternate approach for rendering UML in a browser. It uses [SuperFences extension][superfences] to create
+special, custom fences. Mermaid support is included by default for the `markdown` parser — no additional configuration
+is required. Simply use fenced code blocks with the `mermaid` language identifier:
+
+````
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+````
+
+The default configuration is provided in `MarkdownPreview/js/mermaid_config.js`. If you would like to tweak the
+configuration, you can create your own and reference it in the `js` setting:
 
 ```js
-    "js": [
-        // Mermaid library
-        "https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js",
-        // User configuration, should be loaded before the loader
-        "res://MarkdownPreview/js/mermaid_config.js",
-        // Mermaid loader
-        "res://MarkdownPreview/js/mermaid.js"
-    ]
+    "js": {
+        "markdown": [
+            "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js",
+            // Your custom configuration, should be loaded before the loader
+            "/path/to/your/mermaid_config.js",
+            "res://MarkdownPreview/js/mermaid.js"
+        ]
+    }
 ```
 
 Please see the `MarkdownPreview.sublime-settings` file to see how custom fences are configured in case you need to
