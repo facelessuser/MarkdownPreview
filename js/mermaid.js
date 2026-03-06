@@ -1,4 +1,4 @@
-const uml = className => {
+const uml = async className => {
 
   // Custom element to encapsulate Mermaid content.
   class MermaidDiv extends HTMLElement {
@@ -68,9 +68,8 @@ const uml = className => {
       messageFontSize: "16px"
     }
   }
-  
+
   // Load up the config
-  mermaid.mermaidAPI.globalReset()
   const config = (typeof mermaidConfig === "undefined") ? defaultConfig : mermaidConfig
   mermaid.initialize(config)
 
@@ -95,27 +94,21 @@ const uml = className => {
     surrogate.appendChild(temp)
 
     try {
-      mermaid.mermaidAPI.render(
-        `_diagram_${i}`,
-        getFromCode(parentEl),
-        content => {
-          const el = document.createElement("div")
-          el.className = className
-          el.innerHTML = content
+      const { svg } = await mermaid.render(`_diagram_${i}`, getFromCode(parentEl))
 
-          // Insert the render where we want it and remove the original text source.
-          // Mermaid will clean up the temporary element.
-          const shadow = document.createElement("diagram-div")
-          shadow.shadowRoot.appendChild(el)
-          block.parentNode.insertBefore(shadow, block)
-          parentEl.style.display = "none"
-          shadow.shadowRoot.appendChild(parentEl)
-          if (parentEl !== block) {
-            block.parentNode.removeChild(block)
-          }
-        },
-        temp
-      )
+      const el = document.createElement("div")
+      el.className = className
+      el.innerHTML = svg
+
+      // Insert the render where we want it and remove the original text source.
+      const shadow = document.createElement("diagram-div")
+      shadow.shadowRoot.appendChild(el)
+      block.parentNode.insertBefore(shadow, block)
+      parentEl.style.display = "none"
+      shadow.shadowRoot.appendChild(parentEl)
+      if (parentEl !== block) {
+        block.parentNode.removeChild(block)
+      }
     } catch (err) {} // eslint-disable-line no-empty
 
     if (surrogate.contains(temp)) {
@@ -125,4 +118,4 @@ const uml = className => {
 }
 
 // This should be run on document load
-document.addEventListener("DOMContentLoaded", () => {uml("mermaid")})
+document.addEventListener("DOMContentLoaded", () => { uml("mermaid") })
