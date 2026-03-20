@@ -12,5 +12,4 @@ the release.
 
 -   **NEW**: Add `theme` option to control light/dark theme for markdown parsing styles that support it. Allow templates
     to utilize this option as well.
-    to utilize this option as well.
 -   **FIX**: Fix `details` default settings.
