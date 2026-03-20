@@ -112,7 +112,7 @@
         "markdown.extensions.smarty",
         "markdown.extensions.wikilinks",
         "markdown.extensions.admonition",
-        "markdown.pymdownx.details",
+        "pymdownx.details",
 
         // PyMdown extensions that help give a GitHub-ish feel
         {
