@@ -798,7 +798,7 @@ class GitlabCompiler(OnlineCompiler):
     ]
     default_js = [
         "https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.js",
-        "https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js",
+        "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js",
         # Calling `mermaid.initialize` at the first lines of `gitlab_config.js`
         # should come immediately after `mermaid.js.`
         "res://MarkdownPreview/js/gitlab_config.js"
@@ -901,6 +901,11 @@ class MarkdownCompiler(Compiler):
 
     compiler_name = "markdown"
     default_css = ["res://MarkdownPreview/css/markdown.css"]
+    default_js = [
+        "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js",
+        "res://MarkdownPreview/js/mermaid_config.js",
+        "res://MarkdownPreview/js/mermaid.js"
+    ]
 
     def set_highlight(self, pygments_style, css_class):
         """Set the Pygments CSS."""

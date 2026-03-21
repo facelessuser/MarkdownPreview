@@ -21,7 +21,7 @@
           - https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js
           - https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js
           - https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js
-          - https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js
+          - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
           - res://MarkdownPreview/js/uml.js
           - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js
           - res://MarkdownPreview/js/math_config.js
