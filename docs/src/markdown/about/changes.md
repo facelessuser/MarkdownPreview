@@ -1,5 +1,9 @@
 # Changes
 
+## 2.8.2
+
+-   **FIX**: Fix invalid use of f-strings in Python 3.3.
+
 ## 2.8.1
 
 -   **FIX**: Release from the correct branch.
